@@ -14,7 +14,6 @@ Inverter is used as the macro in this workshop.
 # Contents 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a443bbce-ef34-4128-8685-337cf54be8e1)
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
