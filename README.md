@@ -3,6 +3,7 @@
 
 # Digital VLSI SoC Design and Planning
 ![squadron-02_TOP-1-720x380](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5c0419bc-6be6-4581-bcb6-3272072488b2)
+
 The VSD Squadron chip was designed using the flow discussed in this workshop.The chip is a 48 pin QfN package
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
