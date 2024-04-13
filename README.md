@@ -4,11 +4,15 @@
 # Digital VLSI SoC Design and Planning
 ![squadron-02_TOP-1-720x380](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5c0419bc-6be6-4581-bcb6-3272072488b2)
 
-The VSD Squadron chip was designed using the flow discussed in this workshop.The chip is a 48 pin QfN package
+The VSD Squadron board's chip was designed using the flow discussed in this workshop.This chip is a 48 pin QFN package.
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
 
+Inverter is used as the macro in this workshop.
+
 ## Contents 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a443bbce-ef34-4128-8685-337cf54be8e1)
+
  <div class="toc">
   <ul>
     <li><a href="#header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </a></li>
