@@ -137,6 +137,12 @@ Inverter is used as the macro in this workshop.
 		</ul>
       </ul>
 </div>
+
+<div class="toc">
+  <ul>
+    <li><a href="#header-6">References</a></li>
+  </ul>
+</div>
   
 # <h1 id="header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </h1>	 
 ## <h1 id="header-1_1">1.1 -  How to talk to computers?</h1>
