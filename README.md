@@ -114,8 +114,15 @@ This a typical Board that contains an SOC with peripherals.Our focus is on the c
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1650187e-f4a5-4670-aaa3-6baf7e8d82b5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/04d5aa7f-a716-4009-8ec6-a7bb37e482ce)
+This is a QFN(Quad Flat No-leads)-48 package of Size 7mm x 7mm.The chip is connected with the package using wirebonds.
 
+- Package :
+- QFN-48 : A QFN-48 package, short for Quad Flat No-leads with 48 pins, is a type of integrated circuit packaging commonly used in modern semiconductor devices. This package features a square shape measuring 7mm by 7mm, with leads on all four sides, providing a compact and efficient solution for mounting semiconductor chips onto printed circuit boards (PCBs). The absence of traditional wire leads reduces the overall size of the package and enhances thermal performance, making it suitable for applications where space and heat dissipation are critical concerns, such as mobile devices, consumer electronics, and automotive systems.
 
+**Components of chip**
+- Pads
+- Core
+- Die 
 
 
 
