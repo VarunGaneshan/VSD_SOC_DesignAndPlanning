@@ -15,134 +15,78 @@ Inverter is used as the macro in this workshop.
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a443bbce-ef34-4128-8685-337cf54be8e1)
 
  <div class="toc">
-  <ul>
-    <li><a href="#header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </a></li>
-	<ul>
-        <li><a href="#header-1_1"> How to talk to computers</a></li>
-		<ul>
-			<li><a href="#header-1_1_1">Introduction to QFN-48 Package, chip, pads, core, die and IPs</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-1_1_2">Introduction to RISC-V</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-1_1_3">From Software Applications to Hardware</a></li>
-		</ul>
-      </ul>
+  <ol>
+    <li><a href="#header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024)</a>
       <ul>
-        <li><a href="#header-1_2">Soc design and OpenLANE</a></li>
-	      <ul>
-			<li><a href="#header-1_2_1">Introduction to all components of open-source digital asic design</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-1_2_2"> Simplified RTL2GDS flow</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-1_2_3">Introduction to OpenLANE and Strive chipsets</a></li>
-		</ul>
-	      <ul>
-			<li><a href="#header-1_2_4">Introduction to OpenLANE detailed ASIC design flow</a></li>
-		</ul>
+        <li><a href="#header-1_1">1.1 How to talk to computers</a>
+          <ul>
+            <li><a href="#header-1_1_1">1.1.1 Introduction to QFN-48 Package, chip, pads, core, die and IPs</a></li>
+            <li><a href="#header-1_1_2">1.1.2 Introduction to RISC-V</a></li>
+            <li><a href="#header-1_1_3">1.1.3 From Software Applications to Hardware</a></li>
+          </ul>
+        </li>
+        <li><a href="#header-1_2">1.2 Soc design and OpenLANE</a>
+          <ul>
+            <li><a href="#header-1_2_1">1.2.1 Introduction to all components of open-source digital asic design</a></li>
+            <li><a href="#header-1_2_2">1.2.2 Simplified RTL2GDS flow</a></li>
+            <li><a href="#header-1_2_3">1.2.3 Introduction to OpenLANE and Strive chipsets</a></li>
+            <li><a href="#header-1_2_4">1.2.4 Introduction to OpenLANE detailed ASIC design flow</a></li>
+          </ul>
+        </li>
+        <li><a href="#header-1_3">1.3 Get familiar to open-source EDA tools</a>
+          <ul>
+            <li><a href="#header-1_3_1">1.3.1 OpenLANE Directory structure in detail</a></li>
+            <li><a href="#header-1_3_2">1.3.2 Design Preparation Step</a></li>
+            <li><a href="#header-1_3_3">1.3.3 Review files after design prep and run synthesis</a></li>
+            <li><a href="#header-1_3_4">1.3.4 OpenLANE Project Git Link Description</a></li>
+            <li><a href="#header-1_3_5">1.3.5 Steps to characterize synthesis results</a></li>
+          </ul>
+        </li>
       </ul>
-	<ul>
-        <li><a href="#header-1_3">Get familiar to open-source EDA tools</a></li>
-		<ul>
-			<li><a href="#header-1_3_1">OpenLANE Directory structure in detail</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-1_3_2">Design Preparation Step</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-1_3_3">Review files after design prep and run synthesis</a></li>
-		</ul>
-	      <ul>
-			<li><a href="#header-1_3_4">OpenLANE Project Git Link Description</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-1_3_5">Steps to characterize synthesis results</a></li>
-		</ul>
-      </ul>
-   </div>
-  
-<div class="toc">
-  <ul>
-    <li><a href="#header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024) </a></li>
-	<ul>
-        <li><a href="#header-2_1"> Chip Floor planning consideration</a></li>
-		<ul>
-			<li><a href="#header-2_1_1">Utilization factor and aspect ratio</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_1_2">Concept of pre-placed cells</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_1_3">De-coupling capacitors</a></li>
-		</ul>
-	      <ul>
-			<li><a href="#header-2_1_4">Power planning</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_1_5">Pin placement and logical cell placement blockage</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_1_6">Steps to run floorplan using OpenLANE</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_1_7">Review floorplan files and steps to view floorplan/a></li>
-		</ul>
-	      <ul>
-		      <li><a href="#header-2_1_8">Review floorplan layout in Magic</a></li>
-		</ul>
-      </ul>
+    </li>
+    <li><a href="#header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</a>
       <ul>
-        <li><a href="#header-2_2">Library building and Placement</a></li>
-	      <ul>
-			<li><a href="#header-2_2_1">Netlist binding and initial place design</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_2_2">Optimize placement using estimated wire-length and capacitance</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_2_3">Final placement optimization</a></li>
-		</ul>
-	      <ul>
-			<li><a href="#header-2_2_4">Need for libraries and characterization</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_2_5">Congestion aware placement using RePlAce</a></li>
-		</ul>
+        <li><a href="#header-2_1">2.1 Chip Floor planning consideration</a>
+          <ul>
+            <li><a href="#header-2_1_1">2.1.1 Utilization factor and aspect ratio</a></li>
+            <li><a href="#header-2_1_2">2.1.2 Concept of pre-placed cells</a></li>
+            <li><a href="#header-2_1_3">2.1.3 De-coupling capacitors</a></li>
+            <li><a href="#header-2_1_4">2.1.4 Power planning</a></li>
+            <li><a href="#header-2_1_5">2.1.5 Pin placement and logical cell placement blockage</a></li>
+            <li><a href="#header-2_1_6">2.1.6 Steps to run floorplan using OpenLANE</a></li>
+            <li><a href="#header-2_1_7">2.1.7 Review floorplan files and steps to view floorplan</a></li>
+            <li><a href="#header-2_1_8">2.1.8 Review floorplan layout in Magic</a></li>
+          </ul>
+        </li>
+        <li><a href="#header-2_2">2.2 Library building and Placement</a>
+          <ul>
+            <li><a href="#header-2_2_1">2.2.1 Netlist binding and initial place design</a></li>
+            <li><a href="#header-2_2_2">2.2.2 Optimize placement using estimated wire-length and capacitance</a></li>
+            <li><a href="#header-2_2_3">2.2.3 Final placement optimization</a></li>
+            <li><a href="#header-2_2_4">2.2.4 Need for libraries and characterization</a></li>
+            <li><a href="#header-2_2_5">2.2.5 Congestion aware placement using RePlAce</a></li>
+          </ul>
+        </li>
+        <li><a href="#header-2_3">2.3 Cell design and characterization flows</a>
+          <ul>
+            <li><a href="#header-2_3_1">2.3.1 Inputs for cell design flow</a></li>
+            <li><a href="#header-2_3_2">2.3.2 Circuit design steps</a></li>
+            <li><a href="#header-2_3_3">2.3.3 Layout design step</a></li>
+            <li><a href="#header-2_3_4">2.3.4 Typical characterization flow</a></li>
+          </ul>
+        </li>
+        <li><a href="#header-2_4">2.4 General timing characterization parameters</a>
+          <ul>
+            <li><a href="#header-2_4_1">2.4.1 Timing threshold definitions</a></li>
+            <li><a href="#header-2_4_2">2.4.2 Propagation delay and transition time</a></li>
+          </ul>
+        </li>
       </ul>
-	<ul>
-        <li><a href="#header-2_3">Cell design and characterization flows</a></li>
-		 <ul>
-			<li><a href="#header-2_3_1">Inputs for cell design flow</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_3_2">Circuit design steps</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_3_3">Layout design step</a></li>
-		</ul>
-	      <ul>
-			<li><a href="#header-2_3_4">Typical characterization flow</a></li>
-		</ul>
-      </ul>
-	  <ul>
-        <li><a href="#header-2_4">General timing characterization parameters</a></li>
-		   <ul>
-			<li><a href="#header-2_4_1"> Timing threshold definitions</a></li>
-		</ul>
-		<ul>
-			<li><a href="#header-2_4_2">Propagation delay and transition time</a></li>
-		</ul>
-      </ul>
+    </li>
+    <li><a href="#header-6">References</a></li>
+  </ol>
 </div>
 
-<div class="toc">
-  <ul>
-    <li><a href="#header-6">References</a></li>
-  </ul>
-</div>
 
 # <h1 id="header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </h1>	 
 
