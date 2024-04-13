@@ -196,22 +196,7 @@ Inverter is used as the macro in this workshop.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#  <h6 id="header-6">References</h6>	
+# <h6 id="header-6">References</h6>	
 
 > https://futureskillsprime.in/course/digital-vlsi-soc-design-and-planning
 
