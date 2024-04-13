@@ -1,7 +1,8 @@
 ![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
 
 # Digital VLSI SoC Design and Planning
-![squadron-02_TOP-1-720x380](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5c0419bc-6be6-4581-bcb6-3272072488b2)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
+
 
 The VSD Squadron board's chip was designed using the flow discussed in this workshop.This chip is a 48 pin QFN package.
 
@@ -107,6 +108,12 @@ Inverter is used as the macro in this workshop.
 ## <h1 id="header-1_1">1.1 -  How to talk to computers?</h1>
 
 ### <h1 id="header-1_1_1">1.1.1 - Introduction to QFN-48 Package, chip, pads, core, die and IPs</h1>
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/391e3b2e-0c68-498f-9493-b459bb51dafc)
+This a typical Embedded System which contains an SOC with peripherals.Our focus is on the chip/processor.
+
+
+
 ### <h1 id="header-1_1_2">1.1.2 - Introduction to RISC-V</h1>
 ### <h1 id="header-1_1_2">1.1.3 - From Software Applications to Hardware</h1>
 
