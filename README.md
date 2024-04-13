@@ -65,14 +65,22 @@ This is an example of QFN-48 package.The chip is connected with the package usin
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a0c09423-1663-4a32-a59e-235d42654601)
 
 - Pads: These are areas on the surface of the chip used for making electrical connections. Pads typically connect the chip to external components or the package.
+  
 - Core: The core of a chip refers to its central processing unit (CPU) or the primary computational component where most of the processing tasks occur.
+  
 - Die: The die is the small, square or rectangular piece of semiconductor material that contains the integrated circuitry of the chip. It's typically made from silicon and contains the transistors, resistors, and other components that make up the chip's functionality.
 
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1a074f0b-c650-431b-9534-d34713c32a51)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/3cb6faea-c21d-45d1-bba2-1e2b136f94f6)
 
+This is an example of a typical RISC-V chip.
 
+- Foundary : A foundry is a specialized facility that manufactures integrated circuits for semiconductor design companies. It provides the equipment and expertise for high-volume production of chips, allowing companies to prototype and produce electronics without their own manufacturing facilities.
 
+- Intellectual Property : It refers to inventions, designs, and processes, that are legally protected under patents, copyrights, or trade secrets.
 
+- Foundary IPs:In chip design, IP can include pre-designed circuit blocks, algorithms, or software modules that are licensed or owned by companies for integration into their own designs, saving time and resources.Foundry IPs can include standard cell libraries, memory compilers, I/O libraries, analog and mixed-signal IPs, and various other building blocks required for chip design. 
+  
+-  Macros : They are pre-designed and pre-verified blocks of digital circuitry that perform specific functions. These macros are often complex and can include components such as arithmetic units, memory controllers, or communication interfaces. Designers use macros to expedite the development process by integrating proven, reusable blocks into their designs, rather than designing them from scratch. This approach saves time and effort and helps ensure reliability and consistency in chip design.
 
 
 ### <h1 id="header-1_1_2">1.1.2 - Introduction to RISC-V</h1>
