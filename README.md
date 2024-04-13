@@ -68,6 +68,8 @@ This is an example of QFN-48 package.The chip is connected with the package usin
 - Core: The core of a chip refers to its central processing unit (CPU) or the primary computational component where most of the processing tasks occur.
 - Die: The die is the small, square or rectangular piece of semiconductor material that contains the integrated circuitry of the chip. It's typically made from silicon and contains the transistors, resistors, and other components that make up the chip's functionality.
 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1a074f0b-c650-431b-9534-d34713c32a51)
+
 
 
 
