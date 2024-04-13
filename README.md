@@ -202,7 +202,7 @@ Inverter is used as the macro in this workshop.
 ### <h2 id="header-2_4_2">2.4.2 - Propagation delay and transition time</h2>
 
 
-# <h6 id="header-6">References </h6>	
+# References 
 > https://futureskillsprime.in/course/digital-vlsi-soc-design-and-planning
 
 > Repo Documentation format inspired from [Ms.Kalpana](https://github.com/kmkalpana2001/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/tree/main) , [Mr.Mohammed Fayiz Ferosh](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main?tab=readme-ov-file)
