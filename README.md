@@ -156,7 +156,7 @@ Inverter is used as the macro in this workshop.
 ### <h1 id="header-1_3_3">Review files after design prep and run synthesis</h1>
 ### <h1 id="header-1_3_5">Steps to characterize synthesis results</h1>
 
-# <h2 id="header-2">Day 2 - Good floor planning considerations</h2>	 
+# <h2 id="header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</h2>	 
 ## <h2 id="header-2_1">Chip Floor planning consideration</h2>
 ### <h2 id="header-2_1_1">Utilization factor and aspect ratio</h2>
 ### <h2 id="header-2_1_2">Utilization factor and aspect ratio</h2>
