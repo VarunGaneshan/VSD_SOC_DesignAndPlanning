@@ -2,6 +2,7 @@
 > https://vsdsquadron.vlsisystemdesign.com/digital-vlsi-soc-design-and-planning/
 
 # Digital VLSI SoC Design and Planning
+![squadron-02_TOP-1-720x380](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5c0419bc-6be6-4581-bcb6-3272072488b2)
 
 ## Contents 
  <div class="toc">
