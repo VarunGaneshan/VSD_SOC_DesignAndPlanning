@@ -59,12 +59,14 @@ This is an example of QFN-48 package.The chip is connected with the package usin
 
 - QFN-48 : A QFN-48 package is a type of integrated circuit packaging commonly used in modern semiconductor devices. This package features a square shape measuring 7mm by 7mm, with leads on all four sides, providing a compact and efficient solution for mounting semiconductor chips onto printed circuit boards (PCBs). The absence of traditional wire leads reduces the overall size of the package and enhances thermal performance, making it suitable for applications where space and heat dissipation are critical concerns, such as mobile devices, consumer electronics, and automotive systems.
 
-- Wirebonds : 
+- Wirebonds : Wire bonding is a method used in semiconductor manufacturing to create electrical connections between the integrated circuit (IC) die and the external leads of the chip package. Thin wires made of gold or aluminum are attached to bond pads on the die and the package substrate using specialized equipment. 
 
 **Components of chip**
-- Pads
-- Core
-- Die 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a0c09423-1663-4a32-a59e-235d42654601)
+
+- Pads: These are areas on the surface of the chip used for making electrical connections. Pads typically connect the chip to external components or the package.
+- Core: The core of a chip refers to its central processing unit (CPU) or the primary computational component where most of the processing tasks occur.
+- Die: The die is the small, square or rectangular piece of semiconductor material that contains the integrated circuitry of the chip. It's typically made from silicon and contains the transistors, resistors, and other components that make up the chip's functionality.
 
 
 
