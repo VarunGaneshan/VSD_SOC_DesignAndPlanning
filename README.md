@@ -110,7 +110,12 @@ Inverter is used as the macro in this workshop.
 ### <h1 id="header-1_1_1">1.1.1 - Introduction to QFN-48 Package, chip, pads, core, die and IPs</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/391e3b2e-0c68-498f-9493-b459bb51dafc)
-This a typical Embedded System which contains an SOC with peripherals.Our focus is on the chip/processor.
+This a typical Board that contains an SOC with peripherals.Our focus is on the chip/processor.
+
+
+
+
+
 
 
 
