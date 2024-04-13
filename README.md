@@ -143,12 +143,12 @@ Inverter is used as the macro in this workshop.
     <li><a href="#header-6">References</a></li>
   </ul>
 </div>
-  
+
 # <h1 id="header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </h1>	 
-## <h1 id="header-1_1">1.1 -  How to talk to computers?</h1>
-### <h1 id="header-1_1_1">1.1.1 - Introduction to QFN-48 Package, chip, pads, core, die and IPs</h1>
-### <h1 id="header-1_1_2">1.1.2 - Introduction to RISC-V</h1>
-### <h1 id="header-1_1_2">1.1.3 - From Software Applications to Hardware</h1>
+	## <h1 id="header-1_1">1.1 -  How to talk to computers?</h1>
+		### <h1 id="header-1_1_1">1.1.1 - Introduction to QFN-48 Package, chip, pads, core, die and IPs</h1>
+		### <h1 id="header-1_1_2">1.1.2 - Introduction to RISC-V</h1>
+		### <h1 id="header-1_1_2">1.1.3 - From Software Applications to Hardware</h1>
 
 ## <h1 id="header-1_2">1.2 - Soc design and OpenLANE</h1>
 ### <h1 id="header-1_2_1">1.2.1 - Introduction to all components of open-source digital asic design</h1>
