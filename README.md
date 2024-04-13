@@ -6,7 +6,7 @@
 ## Contents 
  <div class="toc">
   <ul>
-    <li><a href="#header-1">Day 1 - Inception of open-source EDA, OpenLANE and sky130 PDK</a></li>
+    <li><a href="#header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </a></li>
 	<ul>
         <li><a href="#header-1_1"> How to talk to computers</a></li>
 		<ul>
@@ -56,7 +56,7 @@
   
 <div class="toc">
   <ul>
-    <li><a href="#header-2">Day 2 - Good floor planning considerations</a></li>
+    <li><a href="#header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024) </a></li>
 	<ul>
         <li><a href="#header-2_1"> Chip Floor planning consideration</a></li>
 		<ul>
