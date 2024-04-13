@@ -26,32 +26,6 @@ Inverter is used as the macro in this workshop.
 <div class="toc">
   <ul>
     <li><a href="#header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024)</a>
-      <ul>
-        <li><a href="#header-1_1">How to talk to computers</a>
-          <ul>
-            <li><a href="#header-1_1_1">Introduction to QFN-48 Package, chip, pads, core, die and IPs</a></li>
-            <li><a href="#header-1_1_2">Introduction to RISC-V</a></li>
-            <li><a href="#header-1_1_3">From Software Applications to Hardware</a></li>
-          </ul>
-        </li>
-        <li><a href="#header-1_2">Soc design and OpenLANE</a>
-          <ul>
-            <li><a href="#header-1_2_1">Introduction to all components of open-source digital asic design</a></li>
-            <li><a href="#header-1_2_2">Simplified RTL2GDS flow</a></li>
-            <li><a href="#header-1_2_3">Introduction to OpenLANE and Strive chipsets</a></li>
-            <li><a href="#header-1_2_4">Introduction to OpenLANE detailed ASIC design flow</a></li>
-          </ul>
-        </li>
-        <li><a href="#header-1_3">Get familiar to open-source EDA tools</a>
-          <ul>
-            <li><a href="#header-1_3_1">OpenLANE Directory structure in detail</a></li>
-            <li><a href="#header-1_3_2">Design Preparation Step</a></li>
-            <li><a href="#header-1_3_3">Review files after design prep and run synthesis</a></li>
-            <li><a href="#header-1_3_4">OpenLANE Project Git Link Description</a></li>
-            <li><a href="#header-1_3_5">Steps to characterize synthesis results</a></li>
-          </ul>
-        </li>
-      </ul>
     </li>
   </ul>
 </div>
@@ -59,43 +33,6 @@ Inverter is used as the macro in this workshop.
 <div class="toc">
   <ul>
     <li><a href="#header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</a>
-      <ul>
-        <li><a href="#header-2_1">Chip Floor planning consideration</a>
-          <ul>
-            <li><a href="#header-2_1_1">Utilization factor and aspect ratio</a></li>
-            <li><a href="#header-2_1_2">Concept of pre-placed cells</a></li>
-            <li><a href="#header-2_1_3">De-coupling capacitors</a></li>
-            <li><a href="#header-2_1_4">Power planning</a></li>
-            <li><a href="#header-2_1_5">Pin placement and logical cell placement blockage</a></li>
-            <li><a href="#header-2_1_6">Steps to run floorplan using OpenLANE</a></li>
-            <li><a href="#header-2_1_7">Review floorplan files and steps to view floorplan</a></li>
-            <li><a href="#header-2_1_8">Review floorplan layout in Magic</a></li>
-          </ul>
-        </li>
-        <li><a href="#header-2_2">Library building and Placement</a>
-          <ul>
-            <li><a href="#header-2_2_1">Netlist binding and initial place design</a></li>
-            <li><a href="#header-2_2_2">Optimize placement using estimated wire-length and capacitance</a></li>
-            <li><a href="#header-2_2_3">Final placement optimization</a></li>
-            <li><a href="#header-2_2_4">Need for libraries and characterization</a></li>
-            <li><a href="#header-2_2_5">Congestion aware placement using RePlAce</a></li>
-          </ul>
-        </li>
-        <li><a href="#header-2_3">Cell design and characterization flows</a>
-          <ul>
-            <li><a href="#header-2_3_1">Inputs for cell design flow</a></li>
-            <li><a href="#header-2_3_2">Circuit design steps</a></li>
-            <li><a href="#header-2_3_3">Layout design step</a></li>
-            <li><a href="#header-2_3_4">Typical characterization flow</a></li>
-          </ul>
-        </li>
-        <li><a href="#header-2_4">General timing characterization parameters</a>
-          <ul>
-            <li><a href="#header-2_4_1">Timing threshold definitions</a></li>
-            <li><a href="#header-2_4_2">Propagation delay and transition time</a></li>
-          </ul>
-        </li>
-      </ul>
     </li>
   </ul>
 </div>
@@ -116,11 +53,13 @@ This a typical Board that contains an SOC with peripherals.Our focus is on the c
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1650187e-f4a5-4670-aaa3-6baf7e8d82b5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/04d5aa7f-a716-4009-8ec6-a7bb37e482ce)
 
-This is a QFN-48 package of Size 7mm x 7mm.The chip is connected with the package using wirebonds.
+This is an example of QFN-48 package.The chip is connected with the package using wirebonds.
 
-- Package : A package in the context of semiconductor chips refers to the external casing that surrounds and protects the integrated circuit (IC) die. This casing provides mechanical support, electrical connections, and protection against environmental factors such as moisture, dust, and physical damage. The package also facilitates the connection of the chip to external components or circuitry, typically through pins or solder balls.Packages come in various forms and sizes, ranging from small, surface-mount packages like quad flat no-leads (QFN) and ball grid arrays (BGAs) to larger, through-hole packages like dual in-line packages (DIPs) and small outline integrated circuits (SOICs). The choice of package depends on factors such as the intended application, space constraints, thermal considerations, and manufacturing requirements.
+- Package : A package is the external casing that surrounds and protects the integrated circuit (IC) die. This casing provides mechanical support, electrical connections, and protection against environmental factors such as moisture, dust, and physical damage. The package also facilitates the connection of the chip to external components or circuitry, typically through pins or solder balls.Packages come in various forms and sizes, ranging from small, surface-mount packages like quad flat no-leads (QFN) and ball grid arrays (BGAs) to larger, through-hole packages like dual in-line packages (DIPs) and small outline integrated circuits (SOICs). The choice of package depends on factors such as the intended application, space constraints, thermal considerations, and manufacturing requirements.
 
-- QFN-48 : A QFN-48 package, short for Quad Flat No-leads with 48 pins, is a type of integrated circuit packaging commonly used in modern semiconductor devices. This package features a square shape measuring 7mm by 7mm, with leads on all four sides, providing a compact and efficient solution for mounting semiconductor chips onto printed circuit boards (PCBs). The absence of traditional wire leads reduces the overall size of the package and enhances thermal performance, making it suitable for applications where space and heat dissipation are critical concerns, such as mobile devices, consumer electronics, and automotive systems.
+- QFN-48 : A QFN-48 package is a type of integrated circuit packaging commonly used in modern semiconductor devices. This package features a square shape measuring 7mm by 7mm, with leads on all four sides, providing a compact and efficient solution for mounting semiconductor chips onto printed circuit boards (PCBs). The absence of traditional wire leads reduces the overall size of the package and enhances thermal performance, making it suitable for applications where space and heat dissipation are critical concerns, such as mobile devices, consumer electronics, and automotive systems.
+
+- Wirebonds : 
 
 **Components of chip**
 - Pads
