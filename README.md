@@ -138,18 +138,22 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 ### <h1 id="header-1_2_2">1.2.2 -  Simplified RTL2GDS flow</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b01efcad-b8b3-4d27-82a8-f7eca7003978)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/27c88c63-1b62-4366-9bcf-efc73ff76567)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/25ca3433-d156-446d-8a14-c7fe64b7c647)
+
 
 Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
--Synthesis : 
+- Synthesis : This stage involves translating a high-level hardware description into a netlist of logic gates and flip-flops. It's the process of converting RTL (Register Transfer Level) design into a gate-level representation.
 
--Floor/Power Planning :
+- Floor/Power Planning : In this stage, designers decide how to partition the chip's layout space and allocate resources such as power supplies and signal routing channels. It involves making decisions about where to place major components and how to manage power distribution.
 
--Placement :
+- Placement : Placement involves determining the physical location of each logic gate, flip-flop, and other components on the chip's layout. It aims to minimize wire length and optimize performance metrics such as timing and power consumption.
 
--Clock Tree Synthesis :
+- Clock Tree Synthesis : This stage involves designing the clock distribution network on the chip to ensure that clock signals reach all parts of the design with minimal skew and jitter. It includes synthesizing buffers and routing clock signals to different parts of the chip.
 
+- Routing : Routing is the process of determining the paths for connecting the various components on the chip layout while obeying design rules and constraints. It involves routing wires to connect the outputs of one component to the inputs of another.
+
+- Sign-off : Sign-off refers to the final stage of the design process, where the chip design is verified against various criteria such as timing, power, and signal integrity. It involves running extensive simulations and tests to ensure that the design meets all specifications and requirements before sending it for fabrication.
 
 ### <h1 id="header-1_2_3">1.2.3 - Introduction to OpenLANE and Strive chipsets</h1>
 ### <h1 id="header-1_2_4">1.2.4 - Introduction to OpenLANE detailed ASIC design flow</h1>
