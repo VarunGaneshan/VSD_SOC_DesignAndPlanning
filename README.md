@@ -83,7 +83,7 @@ This is an example of a typical RISC-V chip.
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a0f3ebb5-fe4d-419b-ba63-9e03b715601d)
 
-If a user wants to run a certain program in a chip (here a swap c code) , the abstract flow goes like compiling the program,what happens behind is converting the code(Specs) to a assembly langugae program based on its architecture(here RISC-V) which is then converted to a machine language program(binary).A RTL corresponding to the specs are made(here picorv32) which through RTL2GDS flow is run on a chip. 
+If a user wants to run a certain program in a chip (here a swap c code) , the abstract flow goes like compiling the program,what happens behind is converting the code(Specs) to a assembly langugae program based on its architecture(here RISC-V) which is then converted to a machine language program(binary).Concurrently,a RTL corresponding to the specs(here picorv32) is generated which through RTL2GDS flow can be physically realized on a chip.
 
 - RISC-V : RISC-V is an open-source instruction set architecture (ISA) that defines the instructions and functionalities of a computer's central processing unit (CPU).
   
