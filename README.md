@@ -79,21 +79,42 @@ This is an example of a typical RISC-V chip.
   
 -  Macros : They are pre-designed and pre-verified blocks of digital circuitry that perform specific functions. These macros are often complex and can include components such as arithmetic units, memory controllers, or communication interfaces. Designers use macros to expedite the development process by integrating proven, reusable blocks into their designs, rather than designing them from scratch. This approach saves time and effort and helps ensure reliability and consistency in chip design.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### <h1 id="header-1_1_2">1.1.2 - Introduction to RISC-V</h1>
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a0f3ebb5-fe4d-419b-ba63-9e03b715601d)
+
+If a user wants to run a certain program in a chip (here a swap c code) , the abstract flow goes like compiling the program,what happens behind is converting the code(Specs) to a assembly langugae program based on its architecture(here RISC-V) which is then converted to a machine language program(binary).A RTL corresponding to the specs are made(here picorv32) which through RTL2GDS flow is run on a chip. 
+
+- RISC-V : RISC-V is an open-source instruction set architecture (ISA) that defines the instructions and functionalities of a computer's central processing unit (CPU).
+  
+- PicoRV32 CPU core :It is a lightweight and compact implementation of the RISC-V ISA.It is known for its small size, low power consumption, and ease of integration into FPGA (Field-Programmable Gate Array) designs. Despite its simplicity, PicoRV32 still provides essential features such as pipelining, branch prediction, and support for both 32-bit and 64-bit RISC-V instructions. 
+  
+- Qflow layout : Qflow is an open-source digital synthesis and layout tool flow used in the design of integrated circuits (ICs). It provides a suite of tools for performing various steps in the chip design process, including synthesis, place and route, and layout generation. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### <h1 id="header-1_1_2">1.1.3 - From Software Applications to Hardware</h1>
 
 ## <h1 id="header-1_2">1.2 - Soc design and OpenLANE</h1>
