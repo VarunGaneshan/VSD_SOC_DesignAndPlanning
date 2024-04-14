@@ -83,7 +83,7 @@ This is an example of a typical RISC-V chip.
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a0f3ebb5-fe4d-419b-ba63-9e03b715601d)
 
-If a user wants to run a certain program in a chip (here a swap c code) , the abstract flow goes like compiling the program,what happens behind is converting the code(Specs) to a assembly langugae program/instructions based on its architecture(here RISC-V) which is then converted to a machine language program(binary).Concurrently,a RTL corresponding to the specs(here picorv32) is generated which through RTL2GDS flow can be physically realized on a chip.
+If a user wants to run a certain program in a chip (here a swap c code) , the abstract flow goes like compiling the program,what happens behind is converting the code(Specs) to a assembly langugae program/instructions based on its architecture(here RISC-V) which is then converted to a machine language program(binary).Concurrently,a RTL corresponding to the specs(here picorv32) is generated which through RTL2GDSII flow can be physically realized on a chip.
 
 - RISC-V : RISC-V is an open-source instruction set architecture (ISA) that defines the instructions and functionalities of a computer's central processing unit (CPU).
   
@@ -103,22 +103,24 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 
 - RTL : It is a hardware description language abstraction level used in digital circuit design. It describes the behavior of a digital system by detailing the flow of data between registers and logic elements. RTL designs are closer to the hardware implementation, making them suitable for synthesis and subsequent physical design stages.
 
-- Physical Design : Physical design involves the transformation of a logical design (such as RTL) into a physical layout that can be manufactured as a semiconductor chip.It encompasses tasks like floorplanning, placement, routing, and verification
-
 - synthesized netlist : It is a digital blueprint of a circuit created after synthesis. It lists the electronic components and connections, representing the logical structure of the circuit without detailing its physical layout. This netlist serves as an intermediate step for further optimization and analysis in the chip design process before actual implementation.
 
-
-
-
-
-
-
-
-
+- Physical Design : Physical design involves the transformation of a logical design (such as RTL) into a physical layout that can be manufactured as a semiconductor chip.It encompasses tasks like floorplanning, placement, routing, and verification
 
 ## <h1 id="header-1_2">1.2 - Soc design and OpenLANE</h1>
 
 ### <h1 id="header-1_2_1">1.2.1 - Introduction to all components of open-source digital asic design</h1>
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5a03f636-9323-4289-ad27-73e272387fa8)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d5b2302f-b775-4309-acd3-2dd5f7c9ee75)
+
+
+
+
+
+
+
 ### <h1 id="header-1_2_2">1.2.2 -  Simplified RTL2GDS flow</h1>
 ### <h1 id="header-1_2_3">1.2.3 - Introduction to OpenLANE and Strive chipsets</h1>
 ### <h1 id="header-1_2_4">1.2.4 - Introduction to OpenLANE detailed ASIC design flow</h1>
