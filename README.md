@@ -61,6 +61,7 @@ This is an example of QFN-48 package.The chip is connected with the package usin
 - Wirebonds : Wire bonding is a method used in semiconductor manufacturing to create electrical connections between the integrated circuit (IC) die and the external leads of the chip package. Thin wires made of gold or aluminum are attached to bond pads on the die and the package substrate using specialized equipment. 
 
 **Components of a chip:**
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a0c09423-1663-4a32-a59e-235d42654601)
 
 - Pads: These are areas on the surface of the chip used for making electrical connections. Pads typically connect the chip to external components or the package.
@@ -99,6 +100,7 @@ If a user wants to run a certain program in a chip (here a swap c code) , the ab
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d57d4c1d-0ea5-4907-a05b-2f100115e2e9)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d88c02fb-f5e4-4379-ad79-9932dabe1cd9)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ba11217d-c80d-43a7-8c5e-d1581b292c31)
+
 Similar to the flow discussed in the previous section,we see the flow starting from a software application.
 
 - Instruction Set Architecture : ISA defines the set of instructions and how they are encoded for a specific CPU architecture. It dictates how software communicates with the hardware, specifying operations like arithmetic, data movement, and control flow. ISAs can vary widely, influencing factors such as performance, power efficiency, and software compatibility.
@@ -208,6 +210,7 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - clean GDSII means No LVS/DRC/timing violations.
 
 ### <h1 id="header-1_2_4">1.2.4 - Introduction to OpenLANE detailed ASIC design flow</h1>
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/64ac72c3-fb06-4588-9502-866078270ff5)
 
 - Yosys : Yosys is an open-source synthesis tool that transforms RTL (Register Transfer Level) code into a gate-level netlist. It performs logic optimization and technology mapping, converting the design into a format suitable for physical implementation.
@@ -215,6 +218,7 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - abc : ABC is used for logic optimization and technology mapping during synthesis. It converts RTL descriptions into optimized gate-level netlists, enhancing design efficiency and effectiveness.
 
 **Static Timing Analysis:**
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/54041f46-a07d-4cde-aec2-878ac6b417a4)
 
 - OpenSTA : OpenSTA is a static timing analysis tool used for analyzing and verifying timing constraints. It evaluates timing paths in the design to ensure that signals meet timing requirements and identifies timing violations.
@@ -232,6 +236,7 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - Regression Testing: Is the practice of running automated tests on a set of design revisions or configurations to ensure that changes do not introduce regressions or unintended side effects. In OpenLANE, regression testing helps validate design changes and optimizations while maintaining design integrity and quality.
 
 **DFT:**
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/aa7b03b9-6035-4ac6-a8b7-b7bb2602fc91)
 
 - Fault : Fault is a tool for performing fault simulation and testing to verify the robustness and reliability of the design. It identifies potential faults and assesses the impact on circuit functionality.
@@ -239,11 +244,13 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - Design for Test : It encompasses techniques and methodologies in chip design to enhance testing efficiency and effectiveness. It includes methods like scan chains, built-in self-test (BIST), boundary scan (JTAG), memory BIST, and logic BIST, ensuring thorough testing and fault detection in integrated circuits. DFT aims to improve testability, reduce test costs, and expedite time-to-market.
 
 **Physical Implementation:**
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/96308357-21c4-4cbe-acb0-404a54ad0fa9)
 
 - OpenROAD : OpenROAD is a set of open-source tools for RTL-to-GDSII implementation. It includes tools for floorplanning, placement, and routing, enabling physical design optimization while considering factors like area, timing, and power.
 
 **Dealing with Antenna Rules Violations:**
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1e6648b6-7a2b-4eba-9265-c07bfff4dbaf)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8482e50a-a6f5-418a-8f40-1260acab56c9)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d25eeec4-dfd1-4b7e-9fdd-9b0a2ddd99a2)
@@ -257,6 +264,7 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - Fake Antenna Diodes: It refers to a technique used to address antenna rule violations during physical design optimization. Instead of inserting actual diodes, fake diodes are virtually inserted into the design layout to satisfy the antenna rules without altering the circuit's functionality. This approach allows designers to meet manufacturing requirements without introducing unnecessary components into the design.
 
 **LEC:**
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/81895ec9-15da-43d3-a9e5-3e87d33434e8)
 
 - Logical Equivalence Checking : LEC is a formal verification technique used to compare two designs or design representations to ensure that they are functionally equivalent. It checks whether the behavior specified in the RTL description matches that of the gate-level netlist after synthesis
@@ -264,6 +272,7 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - TritonRoute : TritonRoute is a detailed router included in OpenLANE for performing global and detailed routing. It optimizes the routing paths while adhering to design rules and constraints, ensuring signal integrity and manufacturability.
 
 **Physical Verification DRC&LVS :**
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/51882d20-e3b8-404e-ae36-b4c66ea33c41)
 
 - Magic : Magic is a layout tool used for viewing, editing, and verifying physical layout designs. It allows designers to inspect the layout at different levels of abstraction and perform manual optimizations if needed.
