@@ -57,7 +57,7 @@ This is an example of QFN-48 package.The chip is connected with the package usin
 
 - Wirebonds : Wire bonding is a method used in semiconductor manufacturing to create electrical connections between the integrated circuit (IC) die and the external leads of the chip package. Thin wires made of gold or aluminum are attached to bond pads on the die and the package substrate using specialized equipment. 
 
-**Components of a chip**
+**Components of a chip:**
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a0c09423-1663-4a32-a59e-235d42654601)
 
 - Pads: These are areas on the surface of the chip used for making electrical connections. Pads typically connect the chip to external components or the package.
