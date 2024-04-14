@@ -118,17 +118,26 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 - PDK : Process Design Kit is a collection of files and documents provided by semiconductor foundries to support the design of ICs using their manufacturing processes. PDKs contain information about the foundry's fabrication processes, including design rules, device models, parameterized cells (PCells), technology files, and simulation models. Designers use PDKs with EDA tools to create custom IC layouts and verify their designs before manufacturing. 
 
 -  Open Source PDK : The Open Source PDK from Google and SkyWater Technology Foundry offers a freely available Process Design Kit (PDK) based on the 130nm technology node. [Github](https://github.com/google/skywater-pdk)
-  
+
+**Is 130nm old and not in use?**
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d5b2302f-b775-4309-acd3-2dd5f7c9ee75)
 
+6%-4.5B revenue.Despite its age, 130nm technology still finds use in various specialized applications where cost, power efficiency, and reliability are more critical than cutting-edge performance or density.Intel
 
+**Is 130nm fast?**
 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/425b9c99-813c-44f2-ae69-66506f00c56c)
 
+- It is capable of supporting clock speeds sufficient for various applications, especially when coupled with optimized designs and modern design methodologies.
+- Intel P4EE(Q4'o4) : The Intel Pentium 4 Extreme Edition (P4EE) processor, released in Q4 of 2004, operated at a clock speed of 3.46 GHz. This high clock speed was achieved through aggressive transistor scaling and optimization techniques available at the time
 
-
+- sky130_OSU (single cycle RV32i CPU) : Designed using the open-source PDK for the 130nm process node, it can achieve a clock speed of more than 1 GHz.
 
 ### <h1 id="header-1_2_2">1.2.2 -  Simplified RTL2GDS flow</h1>
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b01efcad-b8b3-4d27-82a8-f7eca7003978)
+
 ### <h1 id="header-1_2_3">1.2.3 - Introduction to OpenLANE and Strive chipsets</h1>
 ### <h1 id="header-1_2_4">1.2.4 - Introduction to OpenLANE detailed ASIC design flow</h1>
 
@@ -140,9 +149,9 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 ### <h1 id="header-1_3_4">1.3.4 - OpenLANE Project Git Link Description</h1>
 ### <h1 id="header-1_3_5">1.3.5 - Steps to characterize synthesis results</h1>
 
-# <h2 id="header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</h2>	
+# <h1 id="header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</h1>	
 
-## <h2 id="header-2_1">2.1 - Chip Floor planning consideration</h2>
+## <h1 id="header-2_1">2.1 - Chip Floor planning consideration</h1>
 
 ### <h2 id="header-2_1_1">2.1.1 - Utilization factor and aspect ratio</h2>
 ### <h2 id="header-2_1_2">2.1.2 - Utilization factor and aspect ratio</h2>
