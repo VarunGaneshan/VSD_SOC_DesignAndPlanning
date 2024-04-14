@@ -318,11 +318,11 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 ### <h1 id="header-1_3_2">1.3.2 - Design Preparation Step</h1>
 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/39685a82-6ae7-43f2-a1b5-ac1fe8979c4c)
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/300cd604-c683-48a4-b902-b8c447f730b2)
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/cfce6b01-4765-48e3-b863-4e5ee5e4c433)
-
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/966cae71-1bea-4214-89a4-0676b5efed8b)
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8c9b894a-624b-4b83-ad1d-e17c88e29a40)
 
@@ -330,8 +330,9 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 
 
-
 ### <h1 id="header-1_3_3">1.3.3 - Review files after design prep and run synthesis</h1>
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f68636f9-3766-46e7-9b93-1ee23ba12b23)
 
 ### <h1 id="header-1_3_4">1.3.4 - OpenLANE Project Git Link Description</h1>
 
