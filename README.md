@@ -2,13 +2,10 @@
 
 # Digital VLSI SoC Design and Planning
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
-
-
-The VSD Squadron board's chip was designed using the flow discussed in this workshop.This chip is a 48 pin QFN package.
-
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
 
-Inverter is used as the macro in this workshop.
+
+The VSD Squadron board's chip was designed using the flow discussed in this workshop.This chip is a 48 pin QFN package.Inverter is used as the macro in this workshop.
 
 > https://vsdsquadron.vlsisystemdesign.com/digital-vlsi-soc-design-and-planning/
 
