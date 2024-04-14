@@ -211,6 +211,8 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 - abc : ABC is used for logic optimization and technology mapping during synthesis. It converts RTL descriptions into optimized gate-level netlists, enhancing design efficiency and effectiveness.
 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/381b2925-a987-4236-ad4e-3855d8a762c9)
+
 - OpenSTA : OpenSTA is a static timing analysis tool used for analyzing and verifying timing constraints. It evaluates timing paths in the design to ensure that signals meet timing requirements and identifies timing violations.
   
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ec70c0c4-6ae9-4b6c-af54-39b1d8a0ec5d)
@@ -232,12 +234,24 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - OpenROAD : OpenROAD is a set of open-source tools for RTL-to-GDSII implementation. It includes tools for floorplanning, placement, and routing, enabling physical design optimization while considering factors like area, timing, and power.
   
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/88143b0f-f2e1-483b-86a2-2b1650e5c887)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/94aa0179-ba98-41bd-890f-d3e17966ff83)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/c1bf240b-d275-496e-b946-ae942645e7a3)
 
+- Antenna rule violations : It can occur during the manufacturing process of integrated circuits when certain regions of the chip become susceptible to charge accumulation or depletion. These violations can lead to reliability issues, such as gate oxide breakdown or circuit malfunction, and need to be addressed during the design phase.
+
+- Bridging : It involves adding metal connections to neutralize the charge buildup or depletion in susceptible regions. By connecting these regions to a power or ground rail, the charge is dissipated, mitigating the risk of reliability issues.
+
+- Inserting Antenna Diodes:Antenna diodes are specialized diodes inserted into vulnerable regions of the chip to provide a low-resistance path for charge dissipation. These diodes divert any accumulated charge to prevent reliability problems.
+
+- Fake Antenna Diodes: It refers to a technique used to address antenna rule violations during physical design optimization. Instead of inserting actual diodes, fake diodes are virtually inserted into the design layout to satisfy the antenna rules without altering the circuit's functionality. This approach allows designers to meet manufacturing requirements without introducing unnecessary components into the design.
+  
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a400ecf5-3c6d-4b3a-810a-b02ab4a2d4ba)
 
 - Logical Equivalence Checking : LEC is a formal verification technique used to compare two designs or design representations to ensure that they are functionally equivalent. It checks whether the behavior specified in the RTL description matches that of the gate-level netlist after synthesis
   
 - TritonRoute : TritonRoute is a detailed router included in OpenLANE for performing global and detailed routing. It optimizes the routing paths while adhering to design rules and constraints, ensuring signal integrity and manufacturability.
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/59c7e8cf-4476-4abe-b44d-3ed36499a45f)
 
 - Magic : Magic is a layout tool used for viewing, editing, and verifying physical layout designs. It allows designers to inspect the layout at different levels of abstraction and perform manual optimizations if needed.
 
