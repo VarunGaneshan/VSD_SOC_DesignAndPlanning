@@ -24,15 +24,41 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
 
 <div class="toc">
   <ul>
-    <li><a href="#header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024)</a>
-    </li>
+	<li><a href="#header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024)</a>
+  	<ul>
+    	<li><a href="#header-1_1">How to talk to computers</a>
+      	<ul>
+        	<li><a href="#header-1_1_1">Introduction to QFN-48 Package, chip, pads, core, die and IPs</a></li>
+        	<li><a href="#header-1_1_2">Introduction to RISC-V</a></li>
+        	<li><a href="#header-1_1_3">From Software Applications to Hardware</a></li>
+      	</ul>
+    	</li>
+    	<li><a href="#header-1_2">Soc design and OpenLANE</a>
+      	<ul>
+        	<li><a href="#header-1_2_1">Introduction to all components of open-source digital asic design</a></li>
+        	<li><a href="#header-1_2_2">Simplified RTL2GDS flow</a></li>
+        	<li><a href="#header-1_2_3">Introduction to OpenLANE and Strive chipsets</a></li>
+        	<li><a href="#header-1_2_4">Introduction to OpenLANE detailed ASIC design flow</a></li>
+      	</ul>
+    	</li>
+    	<li><a href="#header-1_3">Get familiar to open-source EDA tools</a>
+      	<ul>
+        	<li><a href="#header-1_3_1">OpenLANE Directory structure in detail</a></li>
+        	<li><a href="#header-1_3_2">Design Preparation Step</a></li>
+        	<li><a href="#header-1_3_3">Review files after design prep and run synthesis</a></li>
+        	<li><a href="#header-1_3_4">OpenLANE Project Git Link Description</a></li>
+        	<li><a href="#header-1_3_5">Steps to characterize synthesis results</a></li>
+      	</ul>
+    	</li>
+  	</ul>
+	</li>
   </ul>
 </div>
 
+
 <div class="toc">
   <ul>
-    <li><a href="#header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</a>
-    </li>
+    <li><a href="#header-6">References</a></li>
   </ul>
 </div>
 
@@ -249,6 +275,8 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 - OpenROAD : OpenROAD is a set of open-source tools for RTL-to-GDSII implementation. It includes tools for floorplanning, placement, and routing, enabling physical design optimization while considering factors like area, timing, and power.
 
+- TritonRoute : TritonRoute is a detailed router included in OpenLANE for performing global and detailed routing. It optimizes the routing paths while adhering to design rules and constraints, ensuring signal integrity and manufacturability.
+  
 **Dealing with Antenna Rules Violations:**
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1e6648b6-7a2b-4eba-9265-c07bfff4dbaf)
@@ -268,8 +296,6 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/81895ec9-15da-43d3-a9e5-3e87d33434e8)
 
 - Logical Equivalence Checking : LEC is a formal verification technique used to compare two designs or design representations to ensure that they are functionally equivalent. It checks whether the behavior specified in the RTL description matches that of the gate-level netlist after synthesis
-  
-- TritonRoute : TritonRoute is a detailed router included in OpenLANE for performing global and detailed routing. It optimizes the routing paths while adhering to design rules and constraints, ensuring signal integrity and manufacturability.
 
 **Physical Verification DRC&LVS :**
 
@@ -279,55 +305,22 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 - Netgen : Netgen is a tool for performing LVS (Layout vs. Schematic) and DRC (Design Rule Checking) verification. It compares the layout against the schematic and checks for discrepancies and violations to ensure design correctness.
 
-
-
-
-
 ## <h1 id="header-1_3">1.3 - Get familiar to open-source EDA tools</h1>
 
 ### <h1 id="header-1_3_1">1.3.1 - OpenLANE Directory structure in detail</h1>
+
 ### <h1 id="header-1_3_2">1.3.2 - Design Preparation Step</h1>
+
 ### <h1 id="header-1_3_3">1.3.3 - Review files after design prep and run synthesis</h1>
+
 ### <h1 id="header-1_3_4">1.3.4 - OpenLANE Project Git Link Description</h1>
+
 ### <h1 id="header-1_3_5">1.3.5 - Steps to characterize synthesis results</h1>
 
-# <h1 id="header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</h1>	
-
-## <h1 id="header-2_1">2.1 - Chip Floor planning consideration</h1>
-
-### <h1 id="header-2_1_1">2.1.1 - Utilization factor and aspect ratio</h1>
-### <h1 id="header-2_1_2">2.1.2 - Utilization factor and aspect ratio</h1>
-### <h1 id="header-2_1_3">2.1.3 - De-coupling capacitors</h1>
-### <h1 id="header-2_1_4">2.1.4 - Power planning</h1>
-### <h1 id="header-2_1_5">2.1.5 - Pin placement and logical cell placement blockage</h1>
-### <h1 id="header-2_1_6">2.1.6 - Steps to run floorplan using OpenLANE</h1>
-### <h1 id="header-2_1_7">2.1.7 - Review floorplan files and steps to view floorplan</h1>
-### <h1 id="header-2_1_8">2.1.8 - Review floorplan layout in Magic</h1>
-
-
-## <h1 id="header-2_2">2.2 - Library building and Placement</h1>
-
-### <h1 id="header-2_2_1">2.2.1 - Netlist binding and initial place design</h1>
-### <h1 id="header-2_2_2">2.2.2 - Optimize placement using estimated wire-length and capacitance</h1>
-### <h1 id="header-2_2_3">2.2.3 - Final placement optimization</h2>
-### <h1 id="header-2_2_4">2.2.4 - Need for libraries and characterization</h1>
-### <h1 id="header-2_2_5">2.2.5 - Congestion aware placement using RePlAce</h1>
-
-## <h1 id="header-2_3">2.3 - Cell design and characterization flows</h1>
-
-### <h1 id="header-2_3_1">2.3.1 - Inputs for cell design flow</h1>
-### <h1 id="header-2_3_2">2.3.2 - Circuit design steps</h1>
-### <h1 id="header-2_3_3">2.3.3 - Layout design step</h1>
-### <h1 id="header-2_3_4">2.3.4 - Typical characterization flow</h1>
-
-## <h1 id="header-2_4">2.4 - General timing characterization parameters</h1>
-
-### <h1 id="header-2_4_1">2.4.1 - Timing threshold definitions</h1>
-### <h1 id="header-2_4_2">2.4.2 - Propagation delay and transition time</h1>
 
 
 
-# References 
+# <h1 id="header-6">References</h1>	
 > https://futureskillsprime.in/course/digital-vlsi-soc-design-and-planning
 
 > Repo Documentation format inspired from [Ms.Kalpana](https://github.com/kmkalpana2001/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/tree/main) , [Mr.Mohammed Fayiz Ferosh](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main?tab=readme-ov-file)
