@@ -1,4 +1,4 @@
-![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/978f05ff-1487-4e27-aa92-0c8872cf3166)![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
 
 # Digital VLSI SoC Design and Planning
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
@@ -140,20 +140,57 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b01efcad-b8b3-4d27-82a8-f7eca7003978)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/25ca3433-d156-446d-8a14-c7fe64b7c647)
 
-
 Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
-- Synthesis : This stage involves translating a high-level hardware description into a netlist of logic gates and flip-flops. It's the process of converting RTL (Register Transfer Level) design into a gate-level representation.
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/95bb7d19-b041-4c0d-a908-90d861364b1d)
+
+- Synthesis : This stage involves translating a high-level hardware description into a netlist of logic gates and flip-flops. It's the process of converting RTL design into a gate-level representation.
+
+- Standard cells : Standard cells are basic components in digital integrated circuit design, comprising pre-designed logic gates and flip-flops.Provided by semiconductor foundries as part of a PDK, standard cells offer benefits such as faster design turnaround time and improved manufacturability.
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/2cb4d4ff-a82d-45fd-b11d-0af9a1dd7ec4)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ab2135b8-7d11-448f-a5d2-9c8025a68667)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/55cff142-d192-4339-ac64-67d6c5b2ef16)
 
 - Floor/Power Planning : In this stage, designers decide how to partition the chip's layout space and allocate resources such as power supplies and signal routing channels. It involves making decisions about where to place major components and how to manage power distribution.
 
+- Chip Floorplan involves the initial layout planning of the various components and functional blocks on a semiconductor chip. It determines the placement of major elements such as the CPU core, memory blocks, I/O interfaces, and other components to optimize factors like signal routing, power distribution, and thermal considerations.
+
+- Macro Floorplan is a more detailed level of floorplanning focusing on specific macro-level functional blocks within the chip. These macros could include complex components such as memory arrays, processors, or specialized IP blocks. Macro floorplanning involves determining the physical placement and interconnection of these blocks to meet performance, area, and power targets while adhering to design constraints and specifications.
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/de14506f-09d0-47aa-af2d-d5126f0fc13f)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dcbfb1de-8227-4b96-bdfd-78b9ecc99bfe)
+
 - Placement : Placement involves determining the physical location of each logic gate, flip-flop, and other components on the chip's layout. It aims to minimize wire length and optimize performance metrics such as timing and power consumption.
 
+- Global placement : Also known as coarse placement or initial placement, is the first stage of the placement process. It involves roughly positioning the cells or modules of the design on the chip's layout while considering factors like timing, power, and area constraints. Global placement aims to achieve a rough approximation of the final placement layout before refining the positions in the detailed placement stage.
+
+- Detailed placement : Also known as fine placement, follows global placement and involves refining the positions of individual cells or modules on the chip's layout. Detailed placement focuses on optimizing factors such as wirelength, timing, and congestion while ensuring that design constraints are met. This stage often employs advanced algorithms and techniques to achieve high-quality placement results, which directly impact the performance and manufacturability of the chip.
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/61e91706-1b14-493f-9d89-52c70417d8a5)
+  
 - Clock Tree Synthesis : This stage involves designing the clock distribution network on the chip to ensure that clock signals reach all parts of the design with minimal skew and jitter. It includes synthesizing buffers and routing clock signals to different parts of the chip.
+
+- Clock Skew : It refers to variations in the arrival times of clock signals at different parts of a digital circuit. It can cause timing issues and impact the performance of the circuit. Minimizing clock skew is crucial for ensuring reliable operation.
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/3b68c3e3-f8e7-4172-8637-1fa9b53a703e)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b78f4fbe-7f96-4df5-a343-11e290907c6a)
 
 - Routing : Routing is the process of determining the paths for connecting the various components on the chip layout while obeying design rules and constraints. It involves routing wires to connect the outputs of one component to the inputs of another.
 
+- Global routing : Also known as rough routing, is the initial stage of routing where the approximate paths for interconnecting the various components of the design are determined. It involves finding high-level routes between blocks or modules while considering factors such as wirelength, congestion, and timing constraints. Global routing creates a rough layout of the routing tracks and establishes the overall connectivity of the design.
+
+- Detailed routing : Also known as fine routing, follows global routing and involves refining the routing paths to meet design specifications and constraints. In this stage, individual wires or nets are routed within the routing tracks established during global routing.
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/7d5fa184-ee18-495f-b863-a11f23a2e7d5)
+
 - Sign-off : Sign-off refers to the final stage of the design process, where the chip design is verified against various criteria such as timing, power, and signal integrity. It involves running extensive simulations and tests to ensure that the design meets all specifications and requirements before sending it for fabrication.
+
+- Design Rule Checking : DRC is a process used in semiconductor design to ensure that the layout of an integrated circuit adheres to the manufacturing rules and constraints specified by the foundry or design team. It involves automatically checking the layout against a set of design rules to identify violations such as minimum feature sizes, spacing requirements, overlap violations, and other geometric violations. DRC is essential for detecting potential manufacturing defects and ensuring the manufacturability and reliability of the chip.
+  
+- Layout vs. Schematic : LVS is a verification process used to ensure the accuracy and consistency between the layout of an integrated circuit and its corresponding schematic or netlist representation. LVS compares the geometric layout of the transistors, wires, and other components against the connectivity and electrical properties specified in the schematic. It checks for discrepancies such as missing connections, extra connections, and electrical mismatches. LVS is critical for identifying design errors and ensuring the functional correctness of the chip.
+  
+- Static Timing Analysis : STA is a method used to analyze and verify the timing behavior of an integrated circuit design. It evaluates the timing characteristics of the digital circuit to ensure that signals propagate correctly and meet timing requirements such as setup and hold times. STA considers factors such as gate delays, wire delays, clock skew, and signal arrival times to predict the circuit's performance under different operating conditions. STA helps identify timing violations and ensures that the design operates reliably at the desired clock frequency.
 
 ### <h1 id="header-1_2_3">1.2.3 - Introduction to OpenLANE and Strive chipsets</h1>
 ### <h1 id="header-1_2_4">1.2.4 - Introduction to OpenLANE detailed ASIC design flow</h1>
