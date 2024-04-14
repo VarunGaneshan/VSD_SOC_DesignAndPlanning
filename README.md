@@ -1,5 +1,7 @@
 ![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
+
 # Digital VLSI SoC Design and Planning
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
 
@@ -9,6 +11,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
 > https://vsdsquadron.vlsisystemdesign.com/digital-vlsi-soc-design-and-planning/
 
 # Contents 
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a443bbce-ef34-4128-8685-337cf54be8e1)
 
 <html lang="en">
@@ -111,6 +114,7 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 ### <h1 id="header-1_2_1">1.2.1 - Introduction to all components of open-source digital asic design</h1>
 
 **Asic Enablers:**
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e580415b-7394-4195-8f47-5d523ec339a9)
 
 - EDA tools : Electronic Design Automation tools are software applications used in electronic system and integrated circuit design. They automate tasks like schematic capture, simulation, synthesis, place and route, timing analysis, physical verification, and power analysis. These tools are crucial for creating complex electronic systems efficiently and accurately, reducing development time and cost.
