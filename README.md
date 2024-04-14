@@ -1,4 +1,4 @@
-![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/83eeb466-0447-4012-b9cd-6db3a0eae1d1)![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
 
 # Digital VLSI SoC Design and Planning
 
@@ -306,6 +306,12 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - Netgen : Netgen is a tool for performing LVS (Layout vs. Schematic) and DRC (Design Rule Checking) verification. It compares the layout against the schematic and checks for discrepancies and violations to ensure design correctness.
 
 ## <h1 id="header-1_3">1.3 - Get familiar to open-source EDA tools</h1>
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dee4d9d1-cfea-43f1-8d03-c3fc73639b69)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/081a3722-a0ba-4b9d-b9fa-884a82fc26e4)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e5bca05c-8c51-40af-92d5-809cda64fe11)
+
 
 ### <h1 id="header-1_3_1">1.3.1 - OpenLANE Directory structure in detail</h1>
 
