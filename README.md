@@ -111,6 +111,7 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 
 ### <h1 id="header-1_2_1">1.2.1 - Introduction to all components of open-source digital asic design</h1>
 
+**Asic Enablers:**
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5a03f636-9323-4289-ad27-73e272387fa8)
 
 - EDA tools : Electronic Design Automation tools are software applications used in electronic system and integrated circuit design. They automate tasks like schematic capture, simulation, synthesis, place and route, timing analysis, physical verification, and power analysis. These tools are crucial for creating complex electronic systems efficiently and accurately, reducing development time and cost.
@@ -137,6 +138,18 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 ### <h1 id="header-1_2_2">1.2.2 -  Simplified RTL2GDS flow</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b01efcad-b8b3-4d27-82a8-f7eca7003978)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/27c88c63-1b62-4366-9bcf-efc73ff76567)
+
+Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
+
+-Synthesis : 
+
+-Floor/Power Planning :
+
+-Placement :
+
+-Clock Tree Synthesis :
+
 
 ### <h1 id="header-1_2_3">1.2.3 - Introduction to OpenLANE and Strive chipsets</h1>
 ### <h1 id="header-1_2_4">1.2.4 - Introduction to OpenLANE detailed ASIC design flow</h1>
