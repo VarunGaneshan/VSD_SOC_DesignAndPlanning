@@ -1,4 +1,4 @@
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/83eeb466-0447-4012-b9cd-6db3a0eae1d1)![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
+![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
 
 # Digital VLSI SoC Design and Planning
 
@@ -334,8 +334,6 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/2879187f-b169-4a91-bff3-74c8d98fc2ac)
 
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/14507278-7b16-4470-8f98-3fe832a4aea0)
-
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/2dcb0ec4-a6a0-413e-a2ab-79a675313646)
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f68636f9-3766-46e7-9b93-1ee23ba12b23)
@@ -348,8 +346,52 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/55fc23be-d8ad-4f0a-b7fc-f7533f5b610d)
 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/84873a04-1ca2-44de-b89c-370f490171b9)
 
 ### <h1 id="header-1_3_4">1.3.4 - OpenLANE Project Git Link Description</h1>
+
+> [Openlane Github](https://github.com/efabless/OpenLane/tree/de223b4c5339aaf932845cbf301638eba75a1971)
+
+**Autonomous mode:**
+```
+./flow.tcl -design designname
+```
+
+**Interactive Mode:**
+You may run the flow interactively by using the `-interactive` option:
+
+```
+./flow.tcl -interactive
+```
+
+A tcl shell will be opened where the openlane package is automatically sourced:
+```
+% package require openlane
+```
+
+Then, you should be able to run the following main commands:
+
+0. Any tcl command.
+1. `prep -design <design> -tag <tag> -config <config> -init_design_config -overwrite` similar to the command line arguments, design is required and the rest is optional
+2. `run_synthesis`
+3. `run_floorplan`
+4. `run_placement`
+5. `run_cts`
+6. `run_routing`
+7. `write_powered_verilog` followed by `set_netlist $::env(routing_logs)/$::env(DESIGN_NAME).powered.v`
+8. `run_magic`
+9. `run_magic_spice_export`
+10. `run_magic_drc`
+11. `run_lvs`
+12. `run_antenna_check`
+
+
+The above commands can also be written in a file and passed to `flow.tcl`:
+
+```
+./flow.tcl -interactive -file <file>
+```
+
 
 ### <h1 id="header-1_3_5">1.3.5 - Steps to characterize synthesis results</h1>
 
@@ -358,5 +400,7 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 # <h1 id="header-6">References</h1>	
 > https://futureskillsprime.in/course/digital-vlsi-soc-design-and-planning
+
+> [Openlane](https://github.com/efabless/openlane2)
 
 > Repo Documentation format inspired from [Ms.Kalpana](https://github.com/kmkalpana2001/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/tree/main) , [Mr.Mohammed Fayiz Ferosh](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main?tab=readme-ov-file)
