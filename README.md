@@ -306,6 +306,9 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - Netgen : Netgen is a tool for performing LVS (Layout vs. Schematic) and DRC (Design Rule Checking) verification. It compares the layout against the schematic and checks for discrepancies and violations to ensure design correctness.
 
 ## <h1 id="header-1_3">1.3 - Get familiar to open-source EDA tools</h1>
+
+### <h1 id="header-1_3_1">1.3.1 - OpenLANE Directory structure in detail</h1>
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dee4d9d1-cfea-43f1-8d03-c3fc73639b69)
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/081a3722-a0ba-4b9d-b9fa-884a82fc26e4)
@@ -313,9 +316,20 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e5bca05c-8c51-40af-92d5-809cda64fe11)
 
 
-### <h1 id="header-1_3_1">1.3.1 - OpenLANE Directory structure in detail</h1>
-
 ### <h1 id="header-1_3_2">1.3.2 - Design Preparation Step</h1>
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/300cd604-c683-48a4-b902-b8c447f730b2)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/cfce6b01-4765-48e3-b863-4e5ee5e4c433)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/966cae71-1bea-4214-89a4-0676b5efed8b)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8c9b894a-624b-4b83-ad1d-e17c88e29a40)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dbba392e-b174-4ae4-a04a-60e376876630)
+
+
+
 
 ### <h1 id="header-1_3_3">1.3.3 - Review files after design prep and run synthesis</h1>
 
