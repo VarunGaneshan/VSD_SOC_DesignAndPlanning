@@ -395,8 +395,14 @@ The above commands can also be written in a file and passed to `flow.tcl`:
 
 ### <h1 id="header-1_3_5">1.3.5 - Steps to characterize synthesis results</h1>
 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d4de2d4b-9258-48a4-ae99-7b7c498d1d14)
 
-
+```math
+Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}  = \frac{1613}{14876} = 0.1084
+```
+```math
+Percentage\ of\ DFF's = Flop\ Ratio * 100 = 0.1084* 100 = 10.84\ \%
+```
 
 # <h1 id="header-6">References</h1>	
 > https://futureskillsprime.in/course/digital-vlsi-soc-design-and-planning
