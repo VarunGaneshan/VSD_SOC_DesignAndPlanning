@@ -421,6 +421,6 @@ Percentage\ of\ DFF's = Flop\ Ratio * 100 = 0.1084* 100 = 10.84\ \%
 # <h1 id="header-6">References</h1>	
 > https://futureskillsprime.in/course/digital-vlsi-soc-design-and-planning
 
-> [Openlane](https://github.com/efabless/openlane2)
+> [Openlane](https://github.com/The-OpenROAD-Project/OpenLane)
 
 > Repo Documentation format inspired from [Ms.Kalpana](https://github.com/kmkalpana2001/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/tree/main) , [Mr.Mohammed Fayiz Ferosh](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main?tab=readme-ov-file)
