@@ -1,4 +1,4 @@
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/978f05ff-1487-4e27-aa92-0c8872cf3166)![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
+![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
 
 # Digital VLSI SoC Design and Planning
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
@@ -193,7 +193,59 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - Static Timing Analysis : STA is a method used to analyze and verify the timing behavior of an integrated circuit design. It evaluates the timing characteristics of the digital circuit to ensure that signals propagate correctly and meet timing requirements such as setup and hold times. STA considers factors such as gate delays, wire delays, clock skew, and signal arrival times to predict the circuit's performance under different operating conditions. STA helps identify timing violations and ensures that the design operates reliably at the desired clock frequency.
 
 ### <h1 id="header-1_2_3">1.2.3 - Introduction to OpenLANE and Strive chipsets</h1>
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6e847155-ad89-4353-9dec-8ccd5430c768)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8b47234e-fc01-4702-a408-2ae804e8b5e7)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/427a83db-d6e9-420d-a858-aebe3b2a0d86)
+
+- OpenLane is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow framework developed by efabless and Google. It provides a complete RTL-to-GDSII design flow for designing and fabricating integrated circuits using standard cell libraries and open-source tools.It can be used to harden Macros and chips.Two mode of operation-Autonomus,Interactive.It has large number of design examples(43 designs with their best configurations).
+
+- striVe is a family of open everything SoCs: Open PDK, Open EDA and Open RTL.
+
+- clean GDSII means No LVS/DRC/timing violations.
+
 ### <h1 id="header-1_2_4">1.2.4 - Introduction to OpenLANE detailed ASIC design flow</h1>
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/64ac72c3-fb06-4588-9502-866078270ff5)
+
+- Yosys : Yosys is an open-source synthesis tool that transforms RTL (Register Transfer Level) code into a gate-level netlist. It performs logic optimization and technology mapping, converting the design into a format suitable for physical implementation.
+
+- abc : ABC is used for logic optimization and technology mapping during synthesis. It converts RTL descriptions into optimized gate-level netlists, enhancing design efficiency and effectiveness.
+
+- OpenSTA : OpenSTA is a static timing analysis tool used for analyzing and verifying timing constraints. It evaluates timing paths in the design to ensure that signals meet timing requirements and identifies timing violations.
+  
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ec70c0c4-6ae9-4b6c-af54-39b1d8a0ec5d)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ea886d8a-f836-4d21-8d37-0450dbe8b06e)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e186923f-1336-49f7-9548-f3deddc15a74)
+
+- Synthesis Exploration: Refers to the process of exploring various synthesis options and parameters to optimize the RTL-to-gate-level conversion. Designers can experiment with different synthesis configurations to achieve better results in terms of area, power, and timing.
+
+- Design Exploration: Involves exploring different design configurations and constraints to achieve desired performance metrics. Designers can iterate through multiple design options, adjusting parameters such as clock frequency, power constraints, and design goals to find the best design solution.
+
+- Regression Testing: Is the practice of running automated tests on a set of design revisions or configurations to ensure that changes do not introduce regressions or unintended side effects. In OpenLANE, regression testing helps validate design changes and optimizations while maintaining design integrity and quality.
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ce76f2d5-146e-4ae3-a3ac-32765d948d60)
+
+- Fault : Fault is a tool for performing fault simulation and testing to verify the robustness and reliability of the design. It identifies potential faults and assesses the impact on circuit functionality.
+  
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/028ca9bf-9d1f-4134-81f9-bb83987eaec4)
+
+- OpenROAD : OpenROAD is a set of open-source tools for RTL-to-GDSII implementation. It includes tools for floorplanning, placement, and routing, enabling physical design optimization while considering factors like area, timing, and power.
+  
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/88143b0f-f2e1-483b-86a2-2b1650e5c887)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a400ecf5-3c6d-4b3a-810a-b02ab4a2d4ba)
+
+- Logical Equivalence Checking : LEC is a formal verification technique used to compare two designs or design representations to ensure that they are functionally equivalent. It checks whether the behavior specified in the RTL description matches that of the gate-level netlist after synthesis
+  
+- TritonRoute : TritonRoute is a detailed router included in OpenLANE for performing global and detailed routing. It optimizes the routing paths while adhering to design rules and constraints, ensuring signal integrity and manufacturability.
+
+- Magic : Magic is a layout tool used for viewing, editing, and verifying physical layout designs. It allows designers to inspect the layout at different levels of abstraction and perform manual optimizations if needed.
+
+- Netgen : Netgen is a tool for performing LVS (Layout vs. Schematic) and DRC (Design Rule Checking) verification. It compares the layout against the schematic and checks for discrepancies and violations to ensure design correctness.
+
+
+
+
 
 ## <h1 id="header-1_3">1.3 - Get familiar to open-source EDA tools</h1>
 
