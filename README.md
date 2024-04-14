@@ -1,4 +1,4 @@
-![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a2de4fff-151d-4c37-bfc5-5b2bb6b67781)![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/46969939-a34c-4aa4-8749-f07ca55bad88)![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
 
 # Digital VLSI SoC Design and Planning
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
@@ -112,7 +112,7 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 ### <h1 id="header-1_2_1">1.2.1 - Introduction to all components of open-source digital asic design</h1>
 
 **Asic Enablers:**
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5a03f636-9323-4289-ad27-73e272387fa8)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e580415b-7394-4195-8f47-5d523ec339a9)
 
 - EDA tools : Electronic Design Automation tools are software applications used in electronic system and integrated circuit design. They automate tasks like schematic capture, simulation, synthesis, place and route, timing analysis, physical verification, and power analysis. These tools are crucial for creating complex electronic systems efficiently and accurately, reducing development time and cost.
 
@@ -211,31 +211,39 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 - abc : ABC is used for logic optimization and technology mapping during synthesis. It converts RTL descriptions into optimized gate-level netlists, enhancing design efficiency and effectiveness.
 
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/381b2925-a987-4236-ad4e-3855d8a762c9)
+**Static Timing Analysis:**
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/54041f46-a07d-4cde-aec2-878ac6b417a4)
 
 - OpenSTA : OpenSTA is a static timing analysis tool used for analyzing and verifying timing constraints. It evaluates timing paths in the design to ensure that signals meet timing requirements and identifies timing violations.
   
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ec70c0c4-6ae9-4b6c-af54-39b1d8a0ec5d)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ea886d8a-f836-4d21-8d37-0450dbe8b06e)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e186923f-1336-49f7-9548-f3deddc15a74)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/466c4a6f-36b6-4f8e-8c0f-0a76ea6cf9b6)
 
 - Synthesis Exploration: Refers to the process of exploring various synthesis options and parameters to optimize the RTL-to-gate-level conversion. Designers can experiment with different synthesis configurations to achieve better results in terms of area, power, and timing.
 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/43a30ea5-97f3-434b-8efd-5612f5e00d66)
+
 - Design Exploration: Involves exploring different design configurations and constraints to achieve desired performance metrics. Designers can iterate through multiple design options, adjusting parameters such as clock frequency, power constraints, and design goals to find the best design solution.
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1f97eb60-d1ee-42f1-b204-212fc2a6560d)
 
 - Regression Testing: Is the practice of running automated tests on a set of design revisions or configurations to ensure that changes do not introduce regressions or unintended side effects. In OpenLANE, regression testing helps validate design changes and optimizations while maintaining design integrity and quality.
 
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ce76f2d5-146e-4ae3-a3ac-32765d948d60)
+**DFT:**
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/aa7b03b9-6035-4ac6-a8b7-b7bb2602fc91)
 
 - Fault : Fault is a tool for performing fault simulation and testing to verify the robustness and reliability of the design. It identifies potential faults and assesses the impact on circuit functionality.
-  
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/028ca9bf-9d1f-4134-81f9-bb83987eaec4)
+
+- Design for Test : It encompasses techniques and methodologies in chip design to enhance testing efficiency and effectiveness. It includes methods like scan chains, built-in self-test (BIST), boundary scan (JTAG), memory BIST, and logic BIST, ensuring thorough testing and fault detection in integrated circuits. DFT aims to improve testability, reduce test costs, and expedite time-to-market.
+
+**Physical Implementation:**
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/96308357-21c4-4cbe-acb0-404a54ad0fa9)
 
 - OpenROAD : OpenROAD is a set of open-source tools for RTL-to-GDSII implementation. It includes tools for floorplanning, placement, and routing, enabling physical design optimization while considering factors like area, timing, and power.
-  
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/88143b0f-f2e1-483b-86a2-2b1650e5c887)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/94aa0179-ba98-41bd-890f-d3e17966ff83)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/c1bf240b-d275-496e-b946-ae942645e7a3)
+
+**Dealing with Antenna Rules Violations:**
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1e6648b6-7a2b-4eba-9265-c07bfff4dbaf)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8482e50a-a6f5-418a-8f40-1260acab56c9)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d25eeec4-dfd1-4b7e-9fdd-9b0a2ddd99a2)
 
 - Antenna rule violations : It can occur during the manufacturing process of integrated circuits when certain regions of the chip become susceptible to charge accumulation or depletion. These violations can lead to reliability issues, such as gate oxide breakdown or circuit malfunction, and need to be addressed during the design phase.
 
@@ -244,14 +252,16 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 - Inserting Antenna Diodes:Antenna diodes are specialized diodes inserted into vulnerable regions of the chip to provide a low-resistance path for charge dissipation. These diodes divert any accumulated charge to prevent reliability problems.
 
 - Fake Antenna Diodes: It refers to a technique used to address antenna rule violations during physical design optimization. Instead of inserting actual diodes, fake diodes are virtually inserted into the design layout to satisfy the antenna rules without altering the circuit's functionality. This approach allows designers to meet manufacturing requirements without introducing unnecessary components into the design.
-  
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a400ecf5-3c6d-4b3a-810a-b02ab4a2d4ba)
+
+**LEC:**
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/81895ec9-15da-43d3-a9e5-3e87d33434e8)
 
 - Logical Equivalence Checking : LEC is a formal verification technique used to compare two designs or design representations to ensure that they are functionally equivalent. It checks whether the behavior specified in the RTL description matches that of the gate-level netlist after synthesis
   
 - TritonRoute : TritonRoute is a detailed router included in OpenLANE for performing global and detailed routing. It optimizes the routing paths while adhering to design rules and constraints, ensuring signal integrity and manufacturability.
 
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/59c7e8cf-4476-4abe-b44d-3ed36499a45f)
+**Physical Verification DRC&LVS :**
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/51882d20-e3b8-404e-ae36-b4c66ea33c41)
 
 - Magic : Magic is a layout tool used for viewing, editing, and verifying physical layout designs. It allows designers to inspect the layout at different levels of abstraction and perform manual optimizations if needed.
 
