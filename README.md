@@ -403,6 +403,20 @@ Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}  = \fr
 ```math
 Percentage\ of\ DFF's = Flop\ Ratio * 100 = 0.1084* 100 = 10.84\ \%
 ```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a12c042c-99a2-4f17-8940-a21d773938b1)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/17179411-a001-4512-bdad-eb2b64c462bf)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/bde08f35-16fe-4811-8f0b-ece09791d72e)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/171f37cf-01e5-4710-9cdf-383959b4cb87)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ddab9c7f-1a90-48a7-b6e0-4c95f27cde6d)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/0780bfb2-1c32-4ffb-b20b-32370e1f8b2d)
+
+
+
 
 # <h1 id="header-6">References</h1>	
 > https://futureskillsprime.in/course/digital-vlsi-soc-design-and-planning
