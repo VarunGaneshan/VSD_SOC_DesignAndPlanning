@@ -392,6 +392,7 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/84873a04-1ca2-44de-b89c-370f490171b9)
 
+
 ### <h1 id="header-1_3_4">1.3.4 - OpenLANE Project Git Link Description</h1>
 
 > [Openlane Github](https://github.com/efabless/OpenLane/tree/de223b4c5339aaf932845cbf301638eba75a1971)
@@ -465,6 +466,25 @@ Percentage\ of\ DFF's = Flop\ Ratio * 100 = 0.1084* 100 = 10.84\ \%
 ## <h1 id="header-2_1">2.1 - Chip Floor planning consideration</h1>
 
 ### <h1 id="header-2_1_1">2.1.1 - Utilization factor and aspect ratio</h1>
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ef4cde48-124d-4927-8f94-ff987e3b90cc)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/3035f14d-959d-4c8f-ab7c-921275633570)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8d68e90b-54e5-4a8c-8db5-b3d354d123fc)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/046d7749-83df-443e-a1de-bf50be96e7f1)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/112e2924-662e-4251-a40f-b70b7cf3b49c)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1f94b871-0044-4b1b-a950-90d7b124306b)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/7dbf4181-8ba7-455f-8ce4-a49df986b7cc)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/3ab73ebd-1158-4b10-b8aa-01d8fac29d95)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f8547fc1-05fe-44bd-bb51-a0636f60b807)
+
+
+Defining the width and height of oore and die in PD flow.
+
+- Netlist : It is a text-based description of an electronic circuit's interconnections and components, used in electronic design automation (EDA) for simulation and synthesis.
+  
+- Utilization Factor = 1.Adding extra cells is not allowed,ideally 50/60% is 
+
+
 ### <h1 id="header-2_1_2">2.1.2 - Utilization factor and aspect ratio</h1>
 ### <h1 id="header-2_1_3">2.1.3 - De-coupling capacitors</h1>
 ### <h1 id="header-2_1_4">2.1.4 - Power planning</h1>
