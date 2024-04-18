@@ -450,6 +450,83 @@ Percentage\ of\ DFF's = Flop\ Ratio * 100 = 0.1084* 100 = 10.84\ \%
 ### <h1 id="header-2_4_1">2.4.1 - Timing threshold definitions</h1>
 ### <h1 id="header-2_4_2">2.4.2 - Propagation delay and transition time</h1>
 
+# <h1 id="header-3">Section 3 - Design library cell using Magic Layout and ngspice characterization (15/03/2024 - 16/03/2024)</h1>
+## <h1 id="header-3_1">Labs for CMOS inverter ngspice simulations</h1>
+### <h1 id="header-3_1_1">IO placer revision</h1>
+### <h1 id="header-3_1_2">SPICE deck creation for CMOS inverter</h1>
+### <h1 id="header-3_1_3">SPICE simulation lab for CMOS inverter</h1>
+### <h1 id="header-3_1_4"> Switching Threshold Vm</h1>
+### <h1 id="header-3_1_5"> Static and dynamic simulation of CMOS inverter</h1>
+### <h1 id="header-3_1_6"> Lab steps to git clone vsdstdcelldesign</h1>
+
+## <h1 id="header-3_2">Inception of layout ̂A CMOS faabrication process</h1>
+### <h1 id="header-3_2_1">Create Active regions</h1>
+### <h1 id="header-3_2_2">Formation of N-well and P-well</h1>
+### <h1 id="header-3_2_3"> Formation of gate terminal</h1>
+### <h1 id="header-3_2_4">Lightly doped drain (LDD) formation</h1>
+### <h1 id="header-3_2_5">Source Ã  drain formation</h1>
+### <h1 id="header-3_2_6">Local interconnect formation</h1>
+### <h1 id="header-3_2_7"> Higher level metal formation</h1>
+### <h1 id="header-3_2_8"> Lab introduction to Sky130 basic layers layout and LEF using inverter</h1>
+### <h1 id="header-3_2_9">Lab steps to create std cell layout and extract spice netlist</h1>
+
+## <h1 id="header-3_3">Sky130 Tech File Labs</h1>
+### <h1 id="header-3_3_1">Lab steps to create final SPICE deck using Sky130 tech</h1>
+### <h1 id="header-3_3_2">Lab steps to characterize inverter using sky130 model files</h1>
+### <h1 id="header-3_3_3">Lab introduction to Magic tool options and DRC rules</h1>
+### <h1 id="header-3_3_4">Lab introduction to Sky130 pdk's and steps to download labs</h1>
+### <h1 id="header-3_3_5">Lab introduction to Magic and steps to load Sky130 tech-rules</h1>
+### <h1 id="header-3_3_6">Lab exercise to fix poly.9 error in Sky130 tech-file</h1>
+### <h1 id="header-3_3_7">Lab exercise to implement poly resistor spacing to diff and tap</h1>
+### <h1 id="header-3_3_8">Lab challenge exercise to describe DRC error as geometrical construct</h1>
+### <h1 id="header-3_3_9">Lab challenge to find missing or incorrect rules and fix them</h1>
+
+# <h1 id="header-4">Section 4 - Pre-layout timing analysis and importance of good clock tree (17/03/2024 - 18/03/2024)</h1>
+## <h1 id="header-4_1">Timing modeling using delay tables</h1>
+### <h1 id="header-4_1_1">Lab steps to convert grid info to track info</h1>
+### <h1 id="header-4_1_2">Lab steps to convert magic layout to std cell LEF</h1>
+### <h1 id="header-4_1_3">Introduction to timing libs and steps to include new cell in synthesis</h1>
+### <h1 id="header-4_1_4">Introduction to delay tables</h1>
+### <h1 id="header-4_1_5">Delay table usage Part 1</h1>
+### <h1 id="header-4_1_6">Delay table usage Part 2</h1>
+### <h1 id="header-4_1_7">Lab steps to configure synthesis settings to fix slack and include vsdinv</h1>
+
+## <h1 id="header-4_2">Timing analysis with ideal clocks using openSTA</h1>
+### <h1 id="header-4_2_1">Setup timing analysis and introduction to flip-flop setup time</h1>
+### <h1 id="header-4_2_2">Introduction to clock jitter and uncertainty</h1>
+### <h1 id="header-4_2_3">Lab steps to configure OpenSTA for post-synth timing analysis</h1>
+### <h1 id="header-4_2_4">Lab steps to optimize synthesis to reduce setup violations</h1>
+### <h1 id="header-4_2_5">Lab steps to do basic timing ECO</h1>
+
+## <h1 id="header-4_3">Clock tree synthesis TritonCTS and signal integrity</h1>
+### <h1 id="header-4_3_1">Clock tree routing and buffering using H-Tree algorithm</h1>
+### <h1 id="header-4_3_2">Crosstalk and clock net shielding</h1>
+### <h1 id="header-4_3_3">Lab steps to run CTS using Triton</h1>
+### <h1 id="header-4_3_4">Lab steps to verify CTS runs</h1>
+
+## <h1 id="header-4_4">Timing analysis with real clock using openSTA</h1>
+### <h1 id="header-4_4_1">Setup timing analysis using real clocks</h1>
+### <h1 id="header-4_4_2">Hold timing analysis using real clocks</h1>
+### <h1 id="header-4_4_3">Lab steps to analyze timing with real clocks using OpenSTA</h1>
+### <h1 id="header-4_4_4">Lab steps to execute OpenSTA with right timing libraries and CTS assignment</h1>
+### <h1 id="header-4_4_5">Lab steps to observe impact of bigger CTS buffers on setup and hold timing</h1>
+
+# <h1 id="header-5">Section 5 -Final step for RTL2GDS using tritinRoute and openSTA (19/03/2024 - 20/03/2024)</h1>
+## <h1 id="header-5_1">Routing and design rule check (DRC)</h1>
+### <h1 id="header-5_1_1">Introduction to Maze Routing Ã  LeeÃ s algorithm</h1>
+### <h1 id="header-5_1_2">LeeÃ s Algorithm conclusion</h1>
+### <h1 id="header-5_1_3">Design Rule Check</h1>
+
+## <h1 id="header-5_2">Power Distribution Network and routing</h1>
+### <h1 id="header-5_2_1">Lab steps to build power distribution network</h1>
+### <h1 id="header-5_2_2">Lab steps from power straps to std cell power</h1>
+### <h1 id="header-5_2_3">Basics of global and detail routing and configure TritonRoute</h1>
+
+## <h1 id="header-5_3">TritonRoute Features</h1>
+### <h1 id="header-5_3_1">TritonRoute feature 1 - Honors pre-processed route guides</h1>
+### <h1 id="header-5_3_2">TritonRoute Feature2 & 3 - Inter-guide connectivity and intra- & inter-layer routing</h1>
+### <h1 id="header-5_3_3">TritonRoute method to handle connectivity</h1>
+### <h1 id="header-5_3_4">Routing topology algorithm and final files list post-route</h1>
 
 # <h1 id="header-6">References</h1>	
 > https://futureskillsprime.in/course/digital-vlsi-soc-design-and-planning
