@@ -416,6 +416,39 @@ Percentage\ of\ DFF's = Flop\ Ratio * 100 = 0.1084* 100 = 10.84\ \%
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/0780bfb2-1c32-4ffb-b20b-32370e1f8b2d)
 
 
+# <h1 id="header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</h1>    
+
+## <h1 id="header-2_1">2.1 - Chip Floor planning consideration</h1>
+
+### <h1 id="header-2_1_1">2.1.1 - Utilization factor and aspect ratio</h1>
+### <h1 id="header-2_1_2">2.1.2 - Utilization factor and aspect ratio</h1>
+### <h1 id="header-2_1_3">2.1.3 - De-coupling capacitors</h1>
+### <h1 id="header-2_1_4">2.1.4 - Power planning</h1>
+### <h1 id="header-2_1_5">2.1.5 - Pin placement and logical cell placement blockage</h1>
+### <h1 id="header-2_1_6">2.1.6 - Steps to run floorplan using OpenLANE</h1>
+### <h1 id="header-2_1_7">2.1.7 - Review floorplan files and steps to view floorplan</h1>
+### <h1 id="header-2_1_8">2.1.8 - Review floorplan layout in Magic</h1>
+
+
+## <h1 id="header-2_2">2.2 - Library building and Placement</h1>
+
+### <h1 id="header-2_2_1">2.2.1 - Netlist binding and initial place design</h1>
+### <h1 id="header-2_2_2">2.2.2 - Optimize placement using estimated wire-length and capacitance</h1>
+### <h1 id="header-2_2_3">2.2.3 - Final placement optimization</h2>
+### <h1 id="header-2_2_4">2.2.4 - Need for libraries and characterization</h1>
+### <h1 id="header-2_2_5">2.2.5 - Congestion aware placement using RePlAce</h1>
+
+## <h1 id="header-2_3">2.3 - Cell design and characterization flows</h1>
+
+### <h1 id="header-2_3_1">2.3.1 - Inputs for cell design flow</h1>
+### <h1 id="header-2_3_2">2.3.2 - Circuit design steps</h1>
+### <h1 id="header-2_3_3">2.3.3 - Layout design step</h1>
+### <h1 id="header-2_3_4">2.3.4 - Typical characterization flow</h1>
+
+## <h1 id="header-2_4">2.4 - General timing characterization parameters</h1>
+
+### <h1 id="header-2_4_1">2.4.1 - Timing threshold definitions</h1>
+### <h1 id="header-2_4_2">2.4.2 - Propagation delay and transition time</h1>
 
 
 # <h1 id="header-6">References</h1>	
