@@ -55,6 +55,50 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
   </ul>
 </div>
 
+<div class="toc">
+  <ul>
+	<li><a href="#header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</a>
+  	<ul>
+    	<li><a href="#header-2_1">Chip Floor planning consideration</a>
+      	<ul>
+        	<li><a href="#header-2_1_1">Utilization factor and aspect ratio</a></li>
+        	<li><a href="#header-2_1_2">Concept of pre-placed cells</a></li>
+        	<li><a href="#header-2_1_3">De-coupling capacitors</a></li>
+        	<li><a href="#header-2_1_4">Power planning</a></li>
+        	<li><a href="#header-2_1_5">Pin placement and logical cell placement blockage</a></li>
+        	<li><a href="#header-2_1_6">Steps to run floorplan using OpenLANE</a></li>
+        	<li><a href="#header-2_1_7">Review floorplan files and steps to view floorplan</a></li>
+        	<li><a href="#header-2_1_8">Review floorplan layout in Magic</a></li>
+      	</ul>
+    	</li>
+    	<li><a href="#header-2_2">Library building and Placement</a>
+      	<ul>
+        	<li><a href="#header-2_2_1">Netlist binding and initial place design</a></li>
+        	<li><a href="#header-2_2_2">Optimize placement using estimated wire-length and capacitance</a></li>
+        	<li><a href="#header-2_2_3">Final placement optimization</a></li>
+        	<li><a href="#header-2_2_4">Need for libraries and characterization</a></li>
+        	<li><a href="#header-2_2_5">Congestion aware placement using RePlAce</a></li>
+      	</ul>
+    	</li>
+    	<li><a href="#header-2_3">Cell design and characterization flows</a>
+      	<ul>
+        	<li><a href="#header-2_3_1">Inputs for cell design flow</a></li>
+        	<li><a href="#header-2_3_2">Circuit design steps</a></li>
+        	<li><a href="#header-2_3_3">Layout design step</a></li>
+        	<li><a href="#header-2_3_4">Typical characterization flow</a></li>
+      	</ul>
+    	</li>
+    	<li><a href="#header-2_4">General timing characterization parameters</a>
+      	<ul>
+        	<li><a href="#header-2_4_1">Timing threshold definitions</a></li>
+        	<li><a href="#header-2_4_2">Propagation delay and transition time</a></li>
+      	</ul>
+    	</li>
+  	</ul>
+	</li>
+  </ul>
+</div>
+
 
 <div class="toc">
   <ul>
