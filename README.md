@@ -10,6 +10,105 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
 
 > https://vsdsquadron.vlsisystemdesign.com/digital-vlsi-soc-design-and-planning/
 
+# Contents
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a443bbce-ef34-4128-8685-337cf54be8e1)
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<div class="toc">
+  <ul>
+    <li><a href="#header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024)</a>
+      <ul>
+   	 <li><a href="#header-1_1">How to talk to computers</a>
+ 		 <ul>
+   		 <li><a href="#header-1_1_1">Introduction to QFN-48 Package, chip, pads, core, die and IPs</a></li>
+   		 <li><a href="#header-1_1_2">Introduction to RISC-V</a></li>
+   		 <li><a href="#header-1_1_3">From Software Applications to Hardware</a></li>
+ 		 </ul>
+   	 </li>
+   	 <li><a href="#header-1_2">Soc design and OpenLANE</a>
+ 		 <ul>
+   		 <li><a href="#header-1_2_1">Introduction to all components of open-source digital asic design</a></li>
+   		 <li><a href="#header-1_2_2">Simplified RTL2GDS flow</a></li>
+   		 <li><a href="#header-1_2_3">Introduction to OpenLANE and Strive chipsets</a></li>
+   		 <li><a href="#header-1_2_4">Introduction to OpenLANE detailed ASIC design flow</a></li>
+ 		 </ul>
+   	 </li>
+   	 <li><a href="#header-1_3">Get familiar to open-source EDA tools</a>
+ 		 <ul>
+   		 <li><a href="#header-1_3_1">OpenLANE Directory structure in detail</a></li>
+   		 <li><a href="#header-1_3_2">Design Preparation Step</a></li>
+   		 <li><a href="#header-1_3_3">Review files after design prep and run synthesis</a></li>
+   		 <li><a href="#header-1_3_4">OpenLANE Project Git Link Description</a></li>
+   		 <li><a href="#header-1_3_5">Steps to characterize synthesis results</a></li>
+ 		 </ul>
+   	 </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="toc">
+  <ul>
+    <li><a href="#header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</a>
+      <ul>
+   	 <li><a href="#header-2_1">Chip Floor planning consideration</a>
+ 		 <ul>
+   		 <li><a href="#header-2_1_1">Utilization factor and aspect ratio</a></li>
+   		 <li><a href="#header-2_1_2">Concept of pre-placed cells</a></li>
+   		 <li><a href="#header-2_1_3">De-coupling capacitors</a></li>
+   		 <li><a href="#header-2_1_4">Power planning</a></li>
+   		 <li><a href="#header-2_1_5">Pin placement and logical cell placement blockage</a></li>
+   		 <li><a href="#header-2_1_6">Steps to run floorplan using OpenLANE</a></li>
+   		 <li><a href="#header-2_1_7">Review floorplan files and steps to view floorplan</a></li>
+   		 <li><a href="#header-2_1_8">Review floorplan layout in Magic</a></li>
+ 		 </ul>
+   	 </li>
+   	 <li><a href="#header-2_2">Library building and Placement</a>
+ 		 <ul>
+   		 <li><a href="#header-2_2_1">Netlist binding and initial place design</a></li>
+   		 <li><a href="#header-2_2_2">Optimize placement using estimated wire-length and capacitance</a></li>
+   		 <li><a href="#header-2_2_3">Final placement optimization</a></li>
+   		 <li><a href="#header-2_2_4">Need for libraries and characterization</a></li>
+   		 <li><a href="#header-2_2_5">Congestion aware placement using RePlAce</a></li>
+ 		 </ul>
+   	 </li>
+   	 <li><a href="#header-2_3">Cell design and characterization flows</a>
+ 		 <ul>
+   		 <li><a href="#header-2_3_1">Inputs for cell design flow</a></li>
+   		 <li><a href="#header-2_3_2">Circuit design steps</a></li>
+   		 <li><a href="#header-2_3_3">Layout design step</a></li>
+   		 <li><a href="#header-2_3_4">Typical characterization flow</a></li>
+ 		 </ul>
+   	 </li>
+   	 <li><a href="#header-2_4">General timing characterization parameters</a>
+ 		 <ul>
+   		 <li><a href="#header-2_4_1">Timing threshold definitions</a></li>
+   		 <li><a href="#header-2_4_2">Propagation delay and transition time</a></li>
+ 		 </ul>
+   	 </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+<div class="toc">
+  <ul>
+	<li><a href="#header-6">References</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
+
 # <h1 id="header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </h1>	 
 
 ## <h1 id="header-1_1">1.1 -  How to talk to computers?</h1>
@@ -256,12 +355,22 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dee4d9d1-cfea-43f1-8d03-c3fc73639b69)
 
+```bash
+cd Desktop/work/tools/openlane_working_dir/
+cd pdks
+cd sky130A
+cd libs.ref
+cd ..
+cd libs.tech
+```
+
 <p><b>SKY130 PDK libraries:</b></p>
 There are seven standard cell libraries provided directly by the SkyWater Technology foundry available for use on SKY130 designs, which differ in intended applications and come in three separate cell heights.Libraries in the SKY130 PDK are named using the following scheme:
 
 ```bash
 <Process name> _ <Library Source Abbreviation> _ <Library Type Abbreviation> [_ <Library Name>]	
 ```
+
 <p><b>sky130_fd_sc_hd.lib:</b></p>
 The sky130_fd_sc_hd library is designed for high density. This library enables higher routed gated density, lower dynamic power consumption, and comparable timing and leakage power. As a trade-off it has lower drive strength.
 
@@ -272,41 +381,116 @@ The sky130_fd_sc_hd library is designed for high density. This library enables h
   
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/081a3722-a0ba-4b9d-b9fa-884a82fc26e4)
 
+```bash
+cd sky130_fd_sc_hd
+cd lib
+```
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e5bca05c-8c51-40af-92d5-809cda64fe11)
 
+```bash
+cd ..
+cd lef
+cd ..
+cd techlef
+```
 
 ### <h1 id="header-1_3_2">1.3.2 - Design Preparation Step</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/39685a82-6ae7-43f2-a1b5-ac1fe8979c4c)
 
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane
+docker
+pwd
+ls -ltr
+./flow.tcl -interactive
+package require openlane 0.9
+```
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/300cd604-c683-48a4-b902-b8c447f730b2)
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane
+cd designs
+ls -ltr
+```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/cfce6b01-4765-48e3-b863-4e5ee5e4c433)
 
+```bash
+cd picorv32a/
+ls-ltr
+cd src
+```
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8c9b894a-624b-4b83-ad1d-e17c88e29a40)
+
+```bash
+less config.tcl
+```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dbba392e-b174-4ae4-a04a-60e376876630)
 
-
+```bash
+less sky130A_sky130_fd_sc_hd_config.tcl
+```
 
 ### <h1 id="header-1_3_3">1.3.3 - Review files after design prep and run synthesis</h1>
 
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/2879187f-b169-4a91-bff3-74c8d98fc2ac)
-
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/2dcb0ec4-a6a0-413e-a2ab-79a675313646)
+
+```bash
+ls -ltr //runs folder created
+cd runs
+cd 14-04-19-44/
+cd tmp
+```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f68636f9-3766-46e7-9b93-1ee23ba12b23)
 
+```bash
+less merged.lef
+```
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/791aa500-a11c-4cb4-a91e-9b09298885cb)
+
+```bash
+cd results
+cd synthesis
+cd reports
+```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/9063d675-d442-4c9f-856b-26666588ad29)
 
+```bash
+ls
+```
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b41d0788-760e-43f0-b60e-5a3207bf6937)
+
+```bash
+less config.tcl
+```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/55fc23be-d8ad-4f0a-b7fc-f7533f5b610d)
 
+
+```bash
+less cmds.log
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/2879187f-b169-4a91-bff3-74c8d98fc2ac)
+
+```bash
+prep -design picorv32a
+```
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/84873a04-1ca2-44de-b89c-370f490171b9)
 
+```bash
+run_synthesis
+```
 
 ### <h1 id="header-1_3_4">1.3.4 - OpenLANE Project Git Link Description</h1>
 
