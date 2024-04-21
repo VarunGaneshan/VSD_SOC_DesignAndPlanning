@@ -1,4 +1,4 @@
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/90a7c67a-50f3-4d93-82cf-0cc88953178e)# Digital VLSI SoC Design and Planning
+# Digital VLSI SoC Design and Planning
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
@@ -1109,18 +1109,19 @@ Change scale value,include pmos nmos libraries,add missing connections-VDD,VSS,d
 .include ./libs/nshort.lib
 
 //.subckt sky130_inv A Y VPWR VGND
-M1001 Y A VGND VGND nshort_model.0 w=35 l=23 ad=1.44n pd=0.152m as=1.37n ps=0.148m
-M1000 Y A VPWR VPWR pshort_model.0 w=37 l=23 ad=1.44n pd=0.152m as=1.52n ps=0.156m
+M1001 Y A VGND VGND nshort_model.0 w=35 l=23 
++ ad=1.44n pd=0.152m as=1.37n ps=0.148m
+M1000 Y A VPWR VPWR pshort_model.0 w=37 l=23
++ ad=1.44n pd=0.152m as=1.52n ps=0.156m
 VDD VPWR 0 3.3V
 VSS VGND 0 0V
 
 Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
-C0 Y A 0.05fF
-C1 VPWR A 0.11fF
-C2 Y VPWR 0.07fF
-C3 Y VGND 0.24fF
-C4 A VGND 0.59fF
-C5 VPWR VGND 0.781f
+C0 A Y 0.05fF
+C1 Y VPWR 0.11fF
+C2 A VPWR 0.07fF
+C3 Y 0 0.24fF
+C4 VPWR 0 0.59fF
 //.ends
 .tran 1n 20n
 .control
@@ -1131,8 +1132,7 @@ run
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5ebc1d73-9019-48e3-893f-5a27eee49943)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1c716ed9-7578-4f7b-aa1a-767bdfe0ae28)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/340af305-07fc-48e4-9ca3-278582c3487f)
-
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1eea1db1-c8d2-47cb-886e-48ba61ae3fdf)
 
 ### <h1 id="header-3_3_2">3.3.2 - Lab steps to characterize inverter using sky130 model files</h1>
 
@@ -1140,13 +1140,34 @@ run
 sudo apt-get install ngspice
 ngsspice sky130_inv.spic
 ```
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6afd4690-01d7-444f-9223-523e235128d1)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/c76fe38a-885c-4fcd-924b-28f1727e2916)
+```bash
+change in gvim - C3 Y 0 2fF
+plot y vs time a
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/690c7fb2-f880-4c85-bad9-ab8adb526da2)
 
+Right click to zoom 
+Rise time transition 20%-0.66 to 80%-2.64 - time value = 60ps
 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8e8f1d85-c67a-4512-a54a-86f5eae213b2)
 
+Fall time transition 80%-2.64 to 20%-0.66 - time value = 40ps
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a3305826-e0ea-4955-aa27-59016ec56eab)
+
+Cell rise delay 50%-1.65 - time value = 50ps
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ef031b08-7508-492d-b7ff-26ec3539be56)
+
+Cell fall delay 50%-1.65 - time value = 30ps 
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4a68051c-a858-4894-8852-3e6a66115ee5)
 
 ### <h1 id="header-3_3_3">3.3.3 - Lab introduction to Magic tool options and DRC rules</h1>
 ### <h1 id="header-3_3_4">3.3.4 - Lab introduction to Sky130 pdk's and steps to download labs</h1>
+
+Sky130 Periphery rules: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
+
 ### <h1 id="header-3_3_5">3.3.5 - Lab introduction to Magic and steps to load Sky130 tech-rules</h1>
 ### <h1 id="header-3_3_6">3.3.6 - Lab exercise to fix poly.9 error in Sky130 tech-file</h1>
 ### <h1 id="header-3_3_7">3.3.7 - Lab exercise to implement poly resistor spacing to diff and tap</h1>
