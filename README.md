@@ -1,4 +1,4 @@
-![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/14bc829e-b333-4b49-9fb3-ef1e4f581fd4)![Screenshot 2024-04-13 at 18-51-16 Digital VLSI SoC Design and Planning](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8dac8fb8-1ab9-496e-9938-8b69647660f3)
 
 # Digital VLSI SoC Design and Planning
 
@@ -867,18 +867,79 @@ less README.md
 ```bash
 less floorplan.tcl
 ```
+(FP_IO MODE) 1 = 0 means pin positioning is random but it is on equal distance.
+
+priority : system default (floorplanning.tcl) < config.tcl < PDK varient.tcl (sky130A_sky130_fd_sc_hd_congig.tcl)
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/50088d2b-4736-4b41-87f1-78fb90e2578a)
 
 ```bash
 run_floorplan
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ab77b8f2-e5c1-48b8-b5dd-38c0a483fff9)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/57fe513b-845b-46f4-a6fa-95e3f7a77e69)
 
 ### <h1 id="header-2_1_7">2.1.7 - Review floorplan files and steps to view floorplan</h1>
 
+```bash
+cd runs
+ls -ltr
+cd logs/floorplan
+```
 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/366fd370-27e4-47bb-aa12-76abdfc8369e)
+
+```bash
+less picorv32a.floorplan.def
+```
+```math
+Given\ 1000\ Unit\ Distance = 1\ Micron
+```
+```math
+Die\ width\ in\ unit\ distance = 660685 - 0 = 660685
+```
+```math
+Die\ height\ in\ unit\ distance = 671405 - 0 = 671405
+```
+```math
+Distance\ in\ microns = \frac{Value\ in\ Unit\ Distance}{1000}
+```
+```math
+Die\ width\ in\ microns = \frac{660685}{1000} = 660.685\ Microns
+```
+```math
+Die\ height\ in\ microns = \frac{671405}{1000} = 671.405\ Microns
+```
+```math
+Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/0d5ca9a0-ae1c-4dd0-9414-bcb96e25ac38)
 
 ### <h1 id="header-2_1_8">2.1.8 - Review floorplan layout in Magic</h1>
+
+```bash
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/7b5350f4-440e-450c-b920-9173291621f2)
+
+press S+V - fit layout
+To Zoom, Left click & Right click & Press Z
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/7e3132ee-2095-497c-a24f-2cf55c2feb70)
+
+Place cursor on object and Press S,open tkcon app and type what
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/c65c03b9-0e02-4e16-aa57-35cccf794c71)
+
+**Decap Cells and Tap Cells**
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6b704c81-3df6-49e1-8561-38a2c2b4da5a)
+
+**Standard Cells** at the bottom left
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4e108f17-7ad1-41e1-900b-0290d29760d3)
 
 
 ## <h1 id="header-2_2">2.2 - Library building and Placement</h1>
