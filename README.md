@@ -922,6 +922,7 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/7b5350f4-440e-450c-b920-9173291621f2)
 
+
 press S+V - fit layout
 To Zoom, Left click & Right click & Press Z
 
@@ -948,22 +949,6 @@ Place cursor on object and Press S,open tkcon app and type what
 ### <h1 id="header-2_2_4">2.2.4 - Need for libraries and characterization</h1>
 ### <h1 id="header-2_2_5">2.2.5 - Congestion aware placement using RePlAce</h1>
 
-
-
-
-
-## <h1 id="header-2_3">2.3 - Cell design and characterization flows</h1>
-
-### <h1 id="header-2_3_1">2.3.1 - Inputs for cell design flow</h1>
-### <h1 id="header-2_3_2">2.3.2 - Circuit design steps</h1>
-### <h1 id="header-2_3_3">2.3.3 - Layout design step</h1>
-### <h1 id="header-2_3_4">2.3.4 - Typical characterization flow</h1>
-
-## <h1 id="header-2_4">2.4 - General timing characterization parameters</h1>
-
-### <h1 id="header-2_4_1">2.4.1 - Timing threshold definitions</h1>
-### <h1 id="header-2_4_2">2.4.2 - Propagation delay and transition time</h1>
-
 ```bash
 run_placement
 ```
@@ -980,14 +965,83 @@ standard cells are correctly placed in standard cell rows
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e60edef2-15f6-432f-af03-3e8538d71bf6)
 
+## <h1 id="header-2_3">2.3 - Cell design and characterization flows</h1>
+
+### <h1 id="header-2_3_1">2.3.1 - Inputs for cell design flow</h1>
+### <h1 id="header-2_3_2">2.3.2 - Circuit design steps</h1>
+### <h1 id="header-2_3_3">2.3.3 - Layout design step</h1>
+### <h1 id="header-2_3_4">2.3.4 - Typical characterization flow</h1>
+
+## <h1 id="header-2_4">2.4 - General timing characterization parameters</h1>
+
+### <h1 id="header-2_4_1">2.4.1 - Timing threshold definitions</h1>
+### <h1 id="header-2_4_2">2.4.2 - Propagation delay and transition time</h1>
+
+
 # <h1 id="header-3">Section 3 - Design library cell using Magic Layout and ngspice characterization (15/03/2024 - 16/03/2024)</h1>
+
 ## <h1 id="header-3_1">3.1 - Labs for CMOS inverter ngspice simulations</h1>
+
 ### <h1 id="header-3_1_1">3.1.1 - IO placer revision</h1>
+
+Rerun till floorplan
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d63e3844-81d4-471a-9427-50dfdd245f69)
+
+```bash
+less floorplan.txt
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1e7f9527-ca7d-4e23-bb33-af1b7e1c7494)
+
+```bash
+% set ::env(FP_IO_MODE) 2
+% run_floorplan
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/42dd3e91-44d9-406a-8656-7903009c2aa0)
+
+Opening the newly run directory
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b30bf80e-9b36-4a7b-a2cb-3f744da93d03)
+
+
+```bash
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+Pins are not equidistant here
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1a2dfa49-dfd9-45ef-9a43-3a1601631051)
+
 ### <h1 id="header-3_1_2">3.1.2 - SPICE deck creation for CMOS inverter</h1>
 ### <h1 id="header-3_1_3">3.1.3 - SPICE simulation lab for CMOS inverter</h1>
 ### <h1 id="header-3_1_4"> 3.1.4 - Switching Threshold Vm</h1>
 ### <h1 id="header-3_1_5">3.1.5 - Static and dynamic simulation of CMOS inverter</h1>
 ### <h1 id="header-3_1_6">3.1.6 - Lab steps to git clone vsdstdcelldesign</h1>
+
+```bash
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+cd vsdstdcelldesign
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d341373d-aabc-4607-8392-95b3ece7985c)
+
+Copy the tech file
+```bash
+cd Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic
+cp sky130A.tech /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/660c9cb6-e5df-49a1-a15f-360c6ad798b5)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/7a34d492-7b5e-4058-bc12-c8ca2acf39ef)
+
+```bash
+magic -T sky130A.tech sky130_inv.mag &
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4591d37d-a3ef-461b-8bb0-c0acd111c8ac)
+
+CMOS inverter
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/22c2fae7-8d3d-4ae6-b940-6eda022f13b6)
+
 
 ## <h1 id="header-3_2">3.2 - Inception of layout ̂A CMOS faabrication process</h1>
 ### <h1 id="header-3_2_1">3.2.1 - Create Active regions</h1>
