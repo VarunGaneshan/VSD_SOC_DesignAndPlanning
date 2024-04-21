@@ -1,4 +1,4 @@
-# Digital VLSI SoC Design and Planning
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/90a7c67a-50f3-4d93-82cf-0cc88953178e)# Digital VLSI SoC Design and Planning
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
@@ -1039,7 +1039,7 @@ magic -T sky130A.tech sky130_inv.mag &
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4591d37d-a3ef-461b-8bb0-c0acd111c8ac)
 
-CMOS inverter
+Custom CMOS inverter
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/22c2fae7-8d3d-4ae6-b940-6eda022f13b6)
 
 
@@ -1052,11 +1052,99 @@ CMOS inverter
 ### <h1 id="header-3_2_6">3.2.6 - Local interconnect formation</h1>
 ### <h1 id="header-3_2_7">3.2.7 - Higher level metal formation</h1>
 ### <h1 id="header-3_2_8">3.2.8 - Lab introduction to Sky130 basic layers layout and LEF using inverter</h1>
+
+Polycross N-diffusion -PMOS
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/41c11501-da58-4aec-b25a-112e3a13f982)
+
+Polycross P-diffusion -NMOS
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/44861c40-32b6-4001-98f8-f9ca5c1a36f9)
+
+Y output port connected to PMOS & NMOS
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8a7a1e75-44bd-4531-9167-76b9e05af277)
+
+PMOS source connected to VDD
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/072b55ed-75a3-4b26-9696-c67f735cbaeb)
+
+NMOS source connected to VDD
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6a720498-dd51-4b3d-b384-fcaf1a84e55e)
+
 ### <h1 id="header-3_2_9">3.2.9 - Lab steps to create std cell layout and extract spice netlist</h1>
+
+```bash
+extract all
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ea59d216-1491-432c-a551-10944ca7ef47)
+
+```bash
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/503cbbd9-e9a5-4a19-be71-5720a3a1e194)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f0d9b4c0-1df5-4a8d-afd5-e5fb4299b9b3)
+
 
 ## <h1 id="header-3_3">3.3 - Sky130 Tech File Labs</h1>
 ### <h1 id="header-3_3_1">3.3.1 - Lab steps to create final SPICE deck using Sky130 tech</h1>
+
+```bash
+gvim sky130_inv.spice
+```
+M1000 - Pmos : Drain-Y , Gate-A , Source-VPWR
+M1001 - Nmos : Drain-Y , Gate-A , Source-VGND
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/02566cd4-57ac-4c93-82de-780d656789d1)
+
+Change scale value,include pmos nmos libraries,add missing connections-VDD,VSS,define input pulse,specify type of analysis 
+```bash
+.option scale=0.01u
+
+.include ./libs/pshort.lib
+.include ./libs/nshort.lib
+
+//.subckt sky130_inv A Y VPWR VGND
+M1001 Y A VGND VGND nshort_model.0 w=35 l=23 ad=1.44n pd=0.152m as=1.37n ps=0.148m
+M1000 Y A VPWR VPWR pshort_model.0 w=37 l=23 ad=1.44n pd=0.152m as=1.52n ps=0.156m
+VDD VPWR 0 3.3V
+VSS VGND 0 0V
+
+Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
+C0 Y A 0.05fF
+C1 VPWR A 0.11fF
+C2 Y VPWR 0.07fF
+C3 Y VGND 0.24fF
+C4 A VGND 0.59fF
+C5 VPWR VGND 0.781f
+//.ends
+.tran 1n 20n
+.control
+run
+.endc
+.end
+
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5ebc1d73-9019-48e3-893f-5a27eee49943)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1c716ed9-7578-4f7b-aa1a-767bdfe0ae28)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/340af305-07fc-48e4-9ca3-278582c3487f)
+
+
 ### <h1 id="header-3_3_2">3.3.2 - Lab steps to characterize inverter using sky130 model files</h1>
+
+```bash
+sudo apt-get install ngspice
+ngsspice sky130_inv.spic
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6afd4690-01d7-444f-9223-523e235128d1)
+
+
+
+
 ### <h1 id="header-3_3_3">3.3.3 - Lab introduction to Magic tool options and DRC rules</h1>
 ### <h1 id="header-3_3_4">3.3.4 - Lab introduction to Sky130 pdk's and steps to download labs</h1>
 ### <h1 id="header-3_3_5">3.3.5 - Lab introduction to Magic and steps to load Sky130 tech-rules</h1>
