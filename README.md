@@ -635,7 +635,7 @@ cd src
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8c9b894a-624b-4b83-ad1d-e17c88e29a40)
 
 ```bash
-less config.tcl
+less config.tcl #exit by pressing q
 ```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dbba392e-b174-4ae4-a04a-60e376876630)
@@ -649,7 +649,7 @@ less sky130A_sky130_fd_sc_hd_config.tcl
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/2dcb0ec4-a6a0-413e-a2ab-79a675313646)
 
 ```bash
-ls -ltr //runs folder created
+ls -ltr 
 cd runs
 cd 14-04-19-44/
 cd tmp
@@ -678,7 +678,7 @@ ls
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b41d0788-760e-43f0-b60e-5a3207bf6937)
 
 ```bash
-less config.tcl
+less config.tcl #exit by "Ctrl + End" or "Fn + Right Arrow"
 ```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/55fc23be-d8ad-4f0a-b7fc-f7533f5b610d)
@@ -757,16 +757,39 @@ Percentage\ of\ DFF's = Flop\ Ratio * 100 = 0.1084* 100 = 10.84\ \%
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a12c042c-99a2-4f17-8940-a21d773938b1)
 
+```bash
+cd results
+cd synthesis
+cd ..
+cd ..
+cd reports
+cd synthesis
+```
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/17179411-a001-4512-bdad-eb2b64c462bf)
+
+```bash
+less picorv32a.synthesis.v
+```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/bde08f35-16fe-4811-8f0b-ece09791d72e)
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/171f37cf-01e5-4710-9cdf-383959b4cb87)
 
+```bash
+less 1-yosys_4.stat.rpt
+```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ddab9c7f-1a90-48a7-b6e0-4c95f27cde6d)
+
+```bash
+less 2-opensta.rpt
+```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/0780bfb2-1c32-4ffb-b20b-32370e1f8b2d)
 
+```bash
+less 2-opensta.timing.rpt
+```
 
 # <h1 id="header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</h1>    
 
