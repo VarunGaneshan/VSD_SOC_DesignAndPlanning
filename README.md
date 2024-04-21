@@ -187,7 +187,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
     
 <div class="toc">
   <ul>
-    <li><a href="#header-4">Day 4 - Pre-layout timing analysis and importance of good clock tree (17/04/2024 - 18/03/2024) </a></li>
+    <li><a href="#header-4">Section 4 - Pre-layout timing analysis and importance of good clock tree (17/04/2024 - 18/03/2024) </a></li>
     <ul>
         <li><a href="#header-4_1">Timing modeling using delay tables</a></li>
          <ul>
@@ -267,7 +267,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
 
 <div class="toc">
   <ul>
-    <li><a href="#header-5">Day 5 - Final step for RTL2GDS using tritinRoute and openSTA (19/04/2024 - 20/03/2024)</a></li>
+    <li><a href="#header-5">Section 5 - Final step for RTL2GDS using tritinRoute and openSTA (19/04/2024 - 20/03/2024)</a></li>
     <ul>
         <li><a href="#header-5_1">Routing and design rule check (DRC)</a></li>
         <ul>
@@ -678,7 +678,7 @@ ls
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b41d0788-760e-43f0-b60e-5a3207bf6937)
 
 ```bash
-less config.tcl #exit by "Ctrl + End" or "Fn + Right Arrow"
+less config.tcl #go to end by pressing "Ctrl + End" or "Fn + Right Arrow" and exit by pressing q
 ```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/55fc23be-d8ad-4f0a-b7fc-f7533f5b610d)
@@ -798,6 +798,7 @@ less 2-opensta.timing.rpt
 ### <h1 id="header-2_1_1">2.1.1 - Utilization factor and aspect ratio</h1>
 
 Defining the width and height of oore and die is the first step PD flow
+
 **Finding values of H&W:**
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ef4cde48-124d-4927-8f94-ff987e3b90cc)
@@ -844,15 +845,39 @@ Aspect\ Ratio = \frac{2}{4} = 0.5
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/15f63572-2841-4b1c-a370-effd713d32b5)
 
-
-
-
 ### <h1 id="header-2_1_2">2.1.2 - Utilization factor and aspect ratio</h1>
 ### <h1 id="header-2_1_3">2.1.3 - De-coupling capacitors</h1>
 ### <h1 id="header-2_1_4">2.1.4 - Power planning</h1>
 ### <h1 id="header-2_1_5">2.1.5 - Pin placement and logical cell placement blockage</h1>
+
 ### <h1 id="header-2_1_6">2.1.6 - Steps to run floorplan using OpenLANE</h1>
+
+```bash
+cd configuration
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/cb59a395-6545-4535-b3fa-aa58636314bd)
+
+Before running floorplan command enable certain switches
+
+```bash
+less README.md
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/bbb75265-114f-41cf-a7a8-f1780e4dbac2)
+
+```bash
+less floorplan.tcl
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/50088d2b-4736-4b41-87f1-78fb90e2578a)
+
+```bash
+run_floorplan
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ab77b8f2-e5c1-48b8-b5dd-38c0a483fff9)
+
 ### <h1 id="header-2_1_7">2.1.7 - Review floorplan files and steps to view floorplan</h1>
+
+
+
 ### <h1 id="header-2_1_8">2.1.8 - Review floorplan layout in Magic</h1>
 
 
