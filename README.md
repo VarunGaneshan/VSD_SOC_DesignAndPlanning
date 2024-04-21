@@ -797,22 +797,54 @@ less 2-opensta.timing.rpt
 
 ### <h1 id="header-2_1_1">2.1.1 - Utilization factor and aspect ratio</h1>
 
+Defining the width and height of oore and die is the first step PD flow
+**Finding values of H&W:**
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ef4cde48-124d-4927-8f94-ff987e3b90cc)
+
+Basic Netlist (launch flop and capture flop with combinational logic)
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/3035f14d-959d-4c8f-ab7c-921275633570)
+
+Providing proper dimensions to the logic gates
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8d68e90b-54e5-4a8c-8db5-b3d354d123fc)
+
+Dimensions of the wire can be neglected for the calculation
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/046d7749-83df-443e-a1de-bf50be96e7f1)
+
+Clubing them to a single plate
+```math
+Length = 2 units , Width = 2 units , Area = 4 sq.units
+```
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/112e2924-662e-4251-a40f-b70b7cf3b49c)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1f94b871-0044-4b1b-a950-90d7b124306b)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/7dbf4181-8ba7-455f-8ce4-a49df986b7cc)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/3ab73ebd-1158-4b10-b8aa-01d8fac29d95)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f8547fc1-05fe-44bd-bb51-a0636f60b807)
+
+Place the cells inside core
+```math
+Utilization\ Factor = \frac{Area\ occupied\ by\ netlist}{Total\ area\ of\ core} = \frac{4}{4} = 1 
+```
+In case of 100% Utilization,Adding extra cells is not allowed,ideally 50/60% is prefered .
+```math
+Aspect\ Ratio = \frac{Height}{Width} = \frac{4}{4} = 1 
+```
+In case of Aspect Ratio = 1,then its a square shaped core,otherwise rectangle.
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5268dbb5-9376-414c-9a08-8a3273402c68)
+
+In a diff dimension,
+```math
+Utilization\ Factor = \frac{4}{8} = 0.5 
+```
+UF < 1,Some more area is present which can be utilized/Optimisation required.
+
+```math
+Aspect\ Ratio = \frac{2}{4} = 0.5 
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/15f63572-2841-4b1c-a370-effd713d32b5)
 
 
-Defining the width and height of oore and die in PD flow.
-
-- Netlist : It is a text-based description of an electronic circuit's interconnections and components, used in electronic design automation (EDA) for simulation and synthesis.
-  
-- Utilization Factor = 1.Adding extra cells is not allowed,ideally 50/60% is 
 
 
 ### <h1 id="header-2_1_2">2.1.2 - Utilization factor and aspect ratio</h1>
