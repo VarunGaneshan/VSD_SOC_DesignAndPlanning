@@ -101,7 +101,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
 
 <div class="toc">
   <ul>
-    <li><a href="#header-3">Section 3 - Design library cell using Magic Layout and ngspice characterization</a></li>
+    <li><a href="#header-3">Section 3 - Design library cell using Magic Layout and ngspice characterization (15/04/2024 - 16/03/2024)</a></li>
       <ul>
         <li><a href="#header-3_1">Labs for CMOS inverter ngspice simulations</a></li>
         <ul>
@@ -187,7 +187,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
     
 <div class="toc">
   <ul>
-    <li><a href="#header-4">Day 4 - Pre-layout timing analysis and importance of good clock tree</a></li>
+    <li><a href="#header-4">Day 4 - Pre-layout timing analysis and importance of good clock tree (17/04/2024 - 18/03/2024) </a></li>
     <ul>
         <li><a href="#header-4_1">Timing modeling using delay tables</a></li>
          <ul>
@@ -267,7 +267,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
 
 <div class="toc">
   <ul>
-    <li><a href="#header-5">Day 5 - Final step for RTL2GDS using tritinRoute and openSTA</a></li>
+    <li><a href="#header-5">Day 5 - Final step for RTL2GDS using tritinRoute and openSTA (19/04/2024 - 20/03/2024)</a></li>
     <ul>
         <li><a href="#header-5_1">Routing and design rule check (DRC)</a></li>
         <ul>
