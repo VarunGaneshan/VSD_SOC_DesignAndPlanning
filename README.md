@@ -948,6 +948,10 @@ Place cursor on object and Press S,open tkcon app and type what
 ### <h1 id="header-2_2_4">2.2.4 - Need for libraries and characterization</h1>
 ### <h1 id="header-2_2_5">2.2.5 - Congestion aware placement using RePlAce</h1>
 
+
+
+
+
 ## <h1 id="header-2_3">2.3 - Cell design and characterization flows</h1>
 
 ### <h1 id="header-2_3_1">2.3.1 - Inputs for cell design flow</h1>
@@ -959,6 +963,22 @@ Place cursor on object and Press S,open tkcon app and type what
 
 ### <h1 id="header-2_4_1">2.4.1 - Timing threshold definitions</h1>
 ### <h1 id="header-2_4_2">2.4.2 - Propagation delay and transition time</h1>
+
+```bash
+run_placement
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/46f7c6e2-70ba-46b9-900d-9d4c599cbbdf)
+
+```bash
+cd ../placement
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/0b3338e3-8199-4ca4-a1d2-d2910359ef20)
+
+standard cells are correctly placed in standard cell rows
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e60edef2-15f6-432f-af03-3e8538d71bf6)
 
 # <h1 id="header-3">Section 3 - Design library cell using Magic Layout and ngspice characterization (15/03/2024 - 16/03/2024)</h1>
 ## <h1 id="header-3_1">3.1 - Labs for CMOS inverter ngspice simulations</h1>
