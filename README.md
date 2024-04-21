@@ -256,6 +256,20 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dee4d9d1-cfea-43f1-8d03-c3fc73639b69)
 
+<p><b>SKY130 PDK libraries:</b></p>
+There are seven standard cell libraries provided directly by the SkyWater Technology foundry available for use on SKY130 designs, which differ in intended applications and come in three separate cell heights.Libraries in the SKY130 PDK are named using the following scheme:
+
+```bash
+<Process name> _ <Library Source Abbreviation> _ <Library Type Abbreviation> [_ <Library Name>]	
+```
+<p><b>sky130_fd_sc_hd.lib:</b></p>
+The sky130_fd_sc_hd library is designed for high density. This library enables higher routed gated density, lower dynamic power consumption, and comparable timing and leakage power. As a trade-off it has lower drive strength.
+
+- Sky130 : It is the name of the process technology.
+- fd     : It is abbreviation for who created and is responsible for the library, here the SkyWater Foundry.
+- sc 	 : It is abbreviation for the type of content found in the library, here the Digital Standard Cells.
+- hd	 : It represents high density.
+  
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/081a3722-a0ba-4b9d-b9fa-884a82fc26e4)
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e5bca05c-8c51-40af-92d5-809cda64fe11)
