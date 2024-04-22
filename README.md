@@ -1396,6 +1396,88 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ### <h1 id="header-4_2_1">4.2.1 - Setup timing analysis and introduction to flip-flop setup time</h1>
 ### <h1 id="header-4_2_2">4.2.2 - Introduction to clock jitter and uncertainty</h1>
 ### <h1 id="header-4_2_3">4.2.3 - Lab steps to configure OpenSTA for post-synth timing analysis</h1>
+
+Since we are having 0 wns after improved timing run we are going to do timing analysis on initial run of synthesis which has lots of violations and no parameters were added to improve timing
+
+Created pre_sta.conf for STA analysis 
+```bash
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+set ::env(SYNTH_SIZING) 1
+run_synthesis
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/9fe61f72-8115-4d97-a08e-62cca38365f8)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/756c70c7-e11f-4246-965a-b4be6f357ff0)
+
+```bash
+gvim pre_sta.conf
+set_cmd_units -time ns -capacitance pF -current mA -voltage V -resistance kOhm -distance um
+
+read_liberty -max /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32
+a/src/sky130_fd_sc_hd_slow.lib
+
+read_liberty -min /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32
+a/src/sky130_fd_sc_hd_fast.lib
+
+read_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/run
+s/22-04_09-28/results/synthesis/picorv32a.synthesis.v
+
+link_design picorv32a
+
+read_sdc /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/my_
+base.sdc
+
+report_checks -path_delay min_max -fields {slew trans net cap input_pin}
+report_tns
+report_wns
+```
+Created pre_sta.conf for STA analysis in openlane directory 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dfefe09b-6a7e-4060-82a8-b7a4e69bb903)
+
+```bash
+set :: env(CLOCK_PORT) clk
+set :: env(CLOCK_PERIOD) 24.73
+#set :: env(SYNTH_DRIVING_CELL) sky130_varun
+set :: env(SYNTH_DRIVING CELL) sky130_fd_sc_hd_inv_8
+set :: env(SYNTH DRIVING_CELL_PIN) Y
+set :: env(SYNTH_CAP_LOAD) 17.653
+set :: env(I0_PCT) 0.2
+set :: env(SYNTH_MAX_FANOUT) 6
+
+create_clock [get_ports $::env(CLOCK_PORT)]  -name $::env(CLOCK_PORT)  -period $::env(CLOCK_PERIOD)
+set input_delay_value [expr $::env(CLOCK_PERIOD) * $::env(IO_PCT)]
+set output_delay_value [expr $::env(CLOCK_PERIOD) * $::env(IO_PCT)]
+puts "\[INFO\]: Setting output delay to: $output_delay_value"
+puts "\[INFO\]: Setting input delay to: $input_delay_value"
+
+set_max_fanout $::env(SYNTH_MAX_FANOUT) [current_design]
+
+set clk_indx [lsearch [all_inputs] [get_port $::env(CLOCK_PORT)]]
+#set rst_indx [lsearch [all_inputs] [get_port resetn]]
+set all_inputs_wo_clk [lreplace [all_inputs] $clk_indx $clk_indx]
+#set all_inputs_wo_clk_rst [lreplace $all_inputs_wo_clk $rst_indx $rst_indx]
+set all_inputs_wo_clk_rst $all_inputs_wo_clk
+
+# correct resetn
+set_input_delay $input_delay_value  -clock [get_clocks $::env(CLOCK_PORT)] $all_inputs_wo_clk_rst
+#set_input_delay 0.0 -clock [get_clocks $::env(CLOCK_PORT)] {resetn}
+set_output_delay $output_delay_value  -clock [get_clocks $::env(CLOCK_PORT)] [all_outputs]
+
+# TODO set this as parameter
+set_driving_cell -lib_cell $::env(SYNTH_DRIVING_CELL) -pin $::env(SYNTH_DRIVING_CELL_PIN) [all_inputs]
+set cap_load [expr $::env(SYNTH_CAP_LOAD) / 1000.0]
+puts "\[INFO\]: Setting load to: $cap_load"
+set_load  $cap_load [all_outputs]
+```
+
+Created my_base.sdc for STA analysis in openlane/designs/picorv32a/src directory based on the file openlane/scripts/base.sdc
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/aa083ed9-caa7-423f-9a35-22e8a419400d)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e89ef606-edc7-4547-ba5e-b26da6141de9)
+
 ### <h1 id="header-4_2_4">4.2.4 - Lab steps to optimize synthesis to reduce setup violations</h1>
 ### <h1 id="header-4_2_5">4.2.5 - Lab steps to do basic timing ECO</h1>
 
