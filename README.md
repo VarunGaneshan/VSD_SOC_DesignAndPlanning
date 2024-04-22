@@ -1785,6 +1785,7 @@ gvim 20-fastroute.guide
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/00d88204-5737-4a8b-b51a-6401d44ea378)
 
 Final generated layout
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f752e167-ebe7-4d04-881a-0ead8b17f2dd)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/feb008d4-b448-45b8-8b2e-8bee3ff64aea)
 
 # <h1 id="header-6">References</h1>	
