@@ -200,9 +200,9 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
 
 # <h1 id="header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </h1>	 
 
-## <h1 id="header-1_1">1.1 -  How to talk to computers?</h1>
+## <h1 id="header-1_1">How to talk to computers?</h1>
 
-### <h1 id="header-1_1_1">1.1.1 - Introduction to QFN-48 Package, chip, pads, core, die and IPs</h1>
+### <h1 id="header-1_1_1">Introduction to QFN-48 Package, chip, pads, core, die and IPs</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/391e3b2e-0c68-498f-9493-b459bb51dafc)
 
@@ -241,7 +241,7 @@ This is an example of a typical RISC-V chip.
   
 -  Macros : They are pre-designed and pre-verified blocks of digital circuitry that perform specific functions. These macros are often complex and can include components such as arithmetic units, memory controllers, or communication interfaces. Designers use macros to expedite the development process by integrating proven, reusable blocks into their designs, rather than designing them from scratch. This approach saves time and effort and helps ensure reliability and consistency in chip design.
 
-### <h1 id="header-1_1_2">1.1.2 - Introduction to RISC-V</h1>
+### <h1 id="header-1_1_2">Introduction to RISC-V</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a0f3ebb5-fe4d-419b-ba63-9e03b715601d)
 
@@ -253,7 +253,7 @@ If a user wants to run a certain program in a chip (here a swap c code) , the ab
   
 - Qflow layout : Qflow is an open-source digital synthesis and layout tool flow used in the design of integrated circuits (ICs). It provides a suite of tools for performing various steps in the chip design process, including synthesis, place and route, and layout generation. 
 
-### <h1 id="header-1_1_2">1.1.3 - From Software Applications to Hardware</h1>
+### <h1 id="header-1_1_2">From Software Applications to Hardware</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8b83cddf-91ec-44e5-a57b-3b99d270e079)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d57d4c1d-0ea5-4907-a05b-2f100115e2e9)
@@ -270,9 +270,9 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 
 - Physical Design : Physical design involves the transformation of a logical design (such as RTL) into a physical layout that can be manufactured as a semiconductor chip.It encompasses tasks like floorplanning, placement, routing, and verification
 
-## <h1 id="header-1_2">1.2 - Soc design and OpenLANE</h1>
+## <h1 id="header-1_2">Soc design and OpenLANE</h1>
 
-### <h1 id="header-1_2_1">1.2.1 - Introduction to all components of open-source digital asic design</h1>
+### <h1 id="header-1_2_1">Introduction to all components of open-source digital asic design</h1>
 
 **Asic Enablers:**
 
@@ -299,7 +299,7 @@ Similar to the flow discussed in the previous section,we see the flow starting f
 
 - sky130_OSU (single cycle RV32i CPU) : Designed using the open-source PDK for the 130nm process node, it can achieve a clock speed of more than 1 GHz.
 
-### <h1 id="header-1_2_2">1.2.2 -  Simplified RTL2GDS flow</h1>
+### <h1 id="header-1_2_2">Simplified RTL2GDS flow</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b01efcad-b8b3-4d27-82a8-f7eca7003978)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/25ca3433-d156-446d-8a14-c7fe64b7c647)
@@ -356,7 +356,7 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
   
 - Static Timing Analysis : STA is a method used to analyze and verify the timing behavior of an integrated circuit design. It evaluates the timing characteristics of the digital circuit to ensure that signals propagate correctly and meet timing requirements such as setup and hold times. STA considers factors such as gate delays, wire delays, clock skew, and signal arrival times to predict the circuit's performance under different operating conditions. STA helps identify timing violations and ensures that the design operates reliably at the desired clock frequency.
 
-### <h1 id="header-1_2_3">1.2.3 - Introduction to OpenLANE and Strive chipsets</h1>
+### <h1 id="header-1_2_3">Introduction to OpenLANE and Strive chipsets</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6e847155-ad89-4353-9dec-8ccd5430c768)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8b47234e-fc01-4702-a408-2ae804e8b5e7)
@@ -368,7 +368,7 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 - clean GDSII means No LVS/DRC/timing violations.
 
-### <h1 id="header-1_2_4">1.2.4 - Introduction to OpenLANE detailed ASIC design flow</h1>
+### <h1 id="header-1_2_4">Introduction to OpenLANE detailed ASIC design flow</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/64ac72c3-fb06-4588-9502-866078270ff5)
 
@@ -438,9 +438,9 @@ Several steps-Methodology-RT2GDS/Automated Pnr/Physical Implementation
 
 - Netgen : Netgen is a tool for performing LVS (Layout vs. Schematic) and DRC (Design Rule Checking) verification. It compares the layout against the schematic and checks for discrepancies and violations to ensure design correctness.
 
-## <h1 id="header-1_3">1.3 - Get familiar to open-source EDA tools</h1>
+## <h1 id="header-1_3">Get familiar to open-source EDA tools</h1>
 
-### <h1 id="header-1_3_1">1.3.1 - OpenLANE Directory structure in detail</h1>
+### <h1 id="header-1_3_1">OpenLANE Directory structure in detail</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dee4d9d1-cfea-43f1-8d03-c3fc73639b69)
 
@@ -484,7 +484,7 @@ cd ..
 cd techlef
 ```
 
-### <h1 id="header-1_3_2">1.3.2 - Design Preparation Step</h1>
+### <h1 id="header-1_3_2">Design Preparation Step</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/39685a82-6ae7-43f2-a1b5-ac1fe8979c4c)
 
@@ -525,7 +525,7 @@ less config.tcl #exit by pressing q
 less sky130A_sky130_fd_sc_hd_config.tcl
 ```
 
-### <h1 id="header-1_3_3">1.3.3 - Review files after design prep and run synthesis</h1>
+### <h1 id="header-1_3_3">Review files after design prep and run synthesis</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/2dcb0ec4-a6a0-413e-a2ab-79a675313646)
 
@@ -581,7 +581,7 @@ prep -design picorv32a
 run_synthesis
 ```
 
-### <h1 id="header-1_3_4">1.3.4 - OpenLANE Project Git Link Description</h1>
+### <h1 id="header-1_3_4">OpenLANE Project Git Link Description</h1>
 
 > [Openlane Github](https://github.com/efabless/OpenLane/tree/de223b4c5339aaf932845cbf301638eba75a1971)
 
@@ -626,7 +626,7 @@ The above commands can also be written in a file and passed to `flow.tcl`:
 ```
 
 
-### <h1 id="header-1_3_5">1.3.5 - Steps to characterize synthesis results</h1>
+### <h1 id="header-1_3_5">Steps to characterize synthesis results</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d4de2d4b-9258-48a4-ae99-7b7c498d1d14)
 
@@ -674,9 +674,9 @@ less 2-opensta.timing.rpt
 
 # <h1 id="header-2">Section 2 - Good floorplan vs bad floorplan and introduction to library cells (13/03/2024 - 14/03/2024)</h1>    
 
-## <h1 id="header-2_1">2.1 - Chip Floor planning consideration</h1>
+## <h1 id="header-2_1">Chip Floor planning consideration</h1>
 
-### <h1 id="header-2_1_1">2.1.1 - Utilization factor and aspect ratio</h1>
+### <h1 id="header-2_1_1">Utilization factor and aspect ratio</h1>
 
 Defining the width and height of oore and die is the first step PD flow
 
@@ -726,7 +726,7 @@ Aspect\ Ratio = \frac{2}{4} = 0.5
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/15f63572-2841-4b1c-a370-effd713d32b5)
 
-### <h1 id="header-2_1_6">2.1.6 - Steps to run floorplan using OpenLANE</h1>
+### <h1 id="header-2_1_6">Steps to run floorplan using OpenLANE</h1>
 
 ```bash
 cd configuration
@@ -755,7 +755,7 @@ run_floorplan
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ab77b8f2-e5c1-48b8-b5dd-38c0a483fff9)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/57fe513b-845b-46f4-a6fa-95e3f7a77e69)
 
-### <h1 id="header-2_1_7">2.1.7 - Review floorplan files and steps to view floorplan</h1>
+### <h1 id="header-2_1_7">Review floorplan files and steps to view floorplan</h1>
 
 ```bash
 cd runs
@@ -792,7 +792,7 @@ Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Sq\ Microns
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/0d5ca9a0-ae1c-4dd0-9414-bcb96e25ac38)
 
-### <h1 id="header-2_1_8">2.1.8 - Review floorplan layout in Magic</h1>
+### <h1 id="header-2_1_8">Review floorplan layout in Magic</h1>
 
 ```bash
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
@@ -819,9 +819,9 @@ Place cursor on object and Press S,open tkcon app and type what
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4e108f17-7ad1-41e1-900b-0290d29760d3)
 
 
-## <h1 id="header-2_2">2.2 - Library building and Placement</h1>
+## <h1 id="header-2_2">Library building and Placement</h1>
 
-### <h1 id="header-2_2_5">2.2.5 - Congestion aware placement using RePlAce</h1>
+### <h1 id="header-2_2_5">Congestion aware placement using RePlAce</h1>
 
 ```bash
 run_placement
@@ -840,11 +840,11 @@ standard cells are correctly placed in standard cell rows
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e60edef2-15f6-432f-af03-3e8538d71bf6)
 
 
-# <h1 id="header-3">Section 3 - Design library cell using Magic Layout and ngspice characterization (15/03/2024 - 16/03/2024)</h1>
+# <h1 id="header-3">Design library cell using Magic Layout and ngspice characterization (15/03/2024 - 16/03/2024)</h1>
 
-## <h1 id="header-3_1">3.1 - Labs for CMOS inverter ngspice simulations</h1>
+## <h1 id="header-3_1">Labs for CMOS inverter ngspice simulations</h1>
 
-### <h1 id="header-3_1_1">3.1.1 - IO placer revision</h1>
+### <h1 id="header-3_1_1">IO placer revision</h1>
 
 Rerun till floorplan
 
@@ -875,7 +875,7 @@ Pins are not equidistant here
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1a2dfa49-dfd9-45ef-9a43-3a1601631051)
 
-### <h1 id="header-3_1_6">3.1.6 - Lab steps to git clone vsdstdcelldesign</h1>
+### <h1 id="header-3_1_6">Lab steps to git clone vsdstdcelldesign</h1>
 
 ```bash
 git clone https://github.com/nickson-jose/vsdstdcelldesign.git
@@ -901,9 +901,9 @@ Custom CMOS inverter
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/22c2fae7-8d3d-4ae6-b940-6eda022f13b6)
 
 
-## <h1 id="header-3_2">3.2 - Inception of layout ̂A CMOS faabrication process</h1>
+## <h1 id="header-3_2">Inception of layout ̂A CMOS faabrication process</h1>
 
-### <h1 id="header-3_2_8">3.2.8 - Lab introduction to Sky130 basic layers layout and LEF using inverter</h1>
+### <h1 id="header-3_2_8">Lab introduction to Sky130 basic layers layout and LEF using inverter</h1>
 
 Polycross N-diffusion -PMOS
 
@@ -925,7 +925,7 @@ NMOS source connected to VDD
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6a720498-dd51-4b3d-b384-fcaf1a84e55e)
 
-### <h1 id="header-3_2_9">3.2.9 - Lab steps to create std cell layout and extract spice netlist</h1>
+### <h1 id="header-3_2_9">Lab steps to create std cell layout and extract spice netlist</h1>
 
 ```bash
 extract all
@@ -942,8 +942,8 @@ ext2spice
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f0d9b4c0-1df5-4a8d-afd5-e5fb4299b9b3)
 
 
-## <h1 id="header-3_3">3.3 - Sky130 Tech File Labs</h1>
-### <h1 id="header-3_3_1">3.3.1 - Lab steps to create final SPICE deck using Sky130 tech</h1>
+## <h1 id="header-3_3">Sky130 Tech File Labs</h1>
+### <h1 id="header-3_3_1">Lab steps to create final SPICE deck using Sky130 tech</h1>
 
 ```bash
 gvim sky130_inv.spice
@@ -986,7 +986,7 @@ run
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1c716ed9-7578-4f7b-aa1a-767bdfe0ae28)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1eea1db1-c8d2-47cb-886e-48ba61ae3fdf)
 
-### <h1 id="header-3_3_2">3.3.2 - Lab steps to characterize inverter using sky130 model files</h1>
+### <h1 id="header-3_3_2">Lab steps to characterize inverter using sky130 model files</h1>
 
 ```bash
 sudo apt-get install ngspice
@@ -1015,7 +1015,7 @@ Cell fall delay 50%-1.65 - time value = 30ps
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4a68051c-a858-4894-8852-3e6a66115ee5)
 
-### <h1 id="header-3_3_4">3.3.4 - Lab introduction to Sky130 pdk's and steps to download labs</h1>
+### <h1 id="header-3_3_4">Lab introduction to Sky130 pdk's and steps to download labs</h1>
 ```bash
 wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
 tar xfz drc_tests.tgz
@@ -1028,14 +1028,14 @@ magic -d XR &
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6fe27f61-b5e2-4b6c-bcdb-add9ecebf17f)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/875c09fd-2aa5-4699-a82a-c761d7b76613)
 
-### <h1 id="header-3_3_5">3.3.5 - Lab introduction to Magic and steps to load Sky130 tech-rules</h1>
+### <h1 id="header-3_3_5">Lab introduction to Magic and steps to load Sky130 tech-rules</h1>
 
 File -> Open -> met3.mag
 Sky130 Periphery rules: [Link](https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html)
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b1816e0a-1eb3-4fdc-8572-2eb825378e6a)
 
-### <h1 id="header-3_3_6">3.3.6 - Lab exercise to fix poly.9 error in Sky130 tech-file</h1>
+### <h1 id="header-3_3_6">Lab exercise to fix poly.9 error in Sky130 tech-file</h1>
 poly.mag
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b7992cc4-012a-49a1-b973-0e62cb724a4e)
@@ -1048,7 +1048,7 @@ change to allpolynonres rule
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/13f219bf-675e-446c-978b-5a8b6954fd72)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/edda916c-5a05-473b-9d27-261867266e7f)
 
-### <h1 id="header-3_3_7">3.3.7 - Lab exercise to implement poly resistor spacing to diff and tap</h1>
+### <h1 id="header-3_3_7">Lab exercise to implement poly resistor spacing to diff and tap</h1>
 
 ```bash
 tech load sky130A.tech
@@ -1057,7 +1057,7 @@ drc check
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ec67eb9d-0c5c-4500-8b71-a7e20aa336b5)
 
-### <h1 id="header-3_3_8">3.3.8 - Lab challenge exercise to describe DRC error as geometrical construct</h1>
+### <h1 id="header-3_3_8">Lab challenge exercise to describe DRC error as geometrical construct</h1>
 
 nwell.mag
 ```bash
@@ -1070,7 +1070,7 @@ nwell.mag
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/74d08d5c-4a9e-479a-bed9-ae55e6a4a3cf)
 
 
-### <h1 id="header-3_3_9">3.3.9 - Lab challenge to find missing or incorrect rules and fix them</h1>
+### <h1 id="header-3_3_9">Lab challenge to find missing or incorrect rules and fix them</h1>
 Not a simple edge rule 
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/9e24c712-5ae5-494b-bf6b-1764d80b32ff)
@@ -1101,10 +1101,11 @@ Not a simple edge rule
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4f0566e3-ead5-44dd-96c6-16b54c9a3c4b)
 
 
-# <h1 id="header-4">Section 4 - Pre-layout timing analysis and importance of good clock tree (17/03/2024 - 18/03/2024)</h1>
-## <h1 id="header-4_1">4.1 - Timing modeling using delay tables</h1>
+# <h1 id="header-4">Pre-layout timing analysis and importance of good clock tree (17/03/2024 - 18/03/2024)</h1>
 
-### <h1 id="header-4_1_1">4.1.1 - Lab steps to convert grid info to track info</h1>
+## <h1 id="header-4_1">Timing modeling using delay tables</h1>
+
+### <h1 id="header-4_1_1">Lab steps to convert grid info to track info</h1>
 
 ```bash
 Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd
@@ -1132,9 +1133,7 @@ Ports lie on the intersection of the vertical and horizontal tracks.Width of the
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/75e87b2a-2372-432c-b474-8a0464570636)
 
-
-
-### <h1 id="header-4_1_2">4.1.2 - Lab steps to convert magic layout to std cell LEF</h1>
+### <h1 id="header-4_1_2">Lab steps to convert magic layout to std cell LEF</h1>
 
 Defining ports
 
@@ -1161,7 +1160,7 @@ ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/91400b7f-96de-4d77-8cb7-f01d24ffe8b1)
 
-### <h1 id="header-4_1_7">4.1.7 - Lab steps to configure synthesis settings to fix slack and include vsdinv</h1>
+### <h1 id="header-4_1_7">Lab steps to configure synthesis settings to fix slack and include vsdinv</h1>
 ```bash
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a
 ```
@@ -1239,8 +1238,8 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6830afae-cef6-4cb0-9940-df21d9dc65b0)
 
 
-## <h1 id="header-4_2">4.2 - Timing analysis with ideal clocks using openSTA</h1>
-### <h1 id="header-4_2_3">4.2.3 - Lab steps to configure OpenSTA for post-synth timing analysis</h1>
+## <h1 id="header-4_2">Timing analysis with ideal clocks using openSTA</h1>
+### <h1 id="header-4_2_3">Lab steps to configure OpenSTA for post-synth timing analysis</h1>
 
 Since we are having 0 wns after improved timing run we are going to do timing analysis on initial run of synthesis which has lots of violations and no parameters were added to improve timing
 
@@ -1327,7 +1326,7 @@ sta pre_sta.conf
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/181efd70-6975-404a-b3da-e4847e3db807)
 
-### <h1 id="header-4_2_4">4.2.4 - Lab steps to optimize synthesis to reduce setup violations</h1>
+### <h1 id="header-4_2_4">Lab steps to optimize synthesis to reduce setup violations</h1>
 
 Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again
 
@@ -1381,7 +1380,7 @@ We observe slack is reduced again
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4517abf5-f99a-4d25-a1cd-c18a4c8b60c3)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8067e205-0f89-49ce-9bc7-eaf1a4a4bc99)
 
-### <h1 id="header-4_2_5">4.2.5 - Lab steps to do basic timing ECO</h1>
+### <h1 id="header-4_2_5">Lab steps to do basic timing ECO</h1>
 
 OR gate of drive strength 2 driving OA gate has more delay
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a92f9dc0-ec20-4134-853c-c45d4a621269)
@@ -1416,9 +1415,9 @@ report_checks -from _29043_ -to _30440_ -through _14506_
 
 Around 1.2827 ns of violation reduced.
 
-## <h1 id="header-4_3">4.3 - Clock tree synthesis TritonCTS and signal integrity</h1>
+## <h1 id="header-4_3">Clock tree synthesis TritonCTS and signal integrity</h1>
 
-### <h1 id="header-4_3_3">4.3.3 - Lab steps to run CTS using Triton</h1>
+### <h1 id="header-4_3_3">Lab steps to run CTS using Triton</h1>
 Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
 ```bash
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/ 22-04_08-29/results/synthesis/
@@ -1461,7 +1460,7 @@ run_cts
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/fafecfe0-0af8-4bef-a684-563ac4b2262b)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/c53ccb89-1e3f-424e-baa1-433530859f99)
 
-### <h1 id="header-4_3_4">4.3.4 - Lab steps to verify CTS runs</h1>
+### <h1 id="header-4_3_4">Lab steps to verify CTS runs</h1>
 
 ```bash
 echo $::env(LIB_SYNTH_COMPLETE)
@@ -1475,9 +1474,9 @@ echo $::env(CTS_ROOT_BUFFER)
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/03d70742-c902-46ab-a2bc-0cda353c7cb1)
 
-## <h1 id="header-4_4">4.4 - Timing analysis with real clock using openSTA</h1>
+## <h1 id="header-4_4">Timing analysis with real clock using openSTA</h1>
 
-### <h1 id="header-4_4_3">4.4.3 - Lab steps to analyze timing with real clocks using OpenSTA</h1>
+### <h1 id="header-4_4_3">Lab steps to analyze timing with real clocks using OpenSTA</h1>
 ```bash
 openroad
 
@@ -1510,7 +1509,8 @@ exit
 
 This analysis is incorrect
 
-### <h1 id="header-4_4_4">4.4.4 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment</h1>
+### <h1 id="header-4_4_4">Lab steps to execute OpenSTA with right timing libraries and CTS assignment</h1>
+
 ```bash
 echo $::env(CTS_CLK_BUFFER_LIST)
 
@@ -1531,7 +1531,7 @@ echo $::env(CTS_CLK_BUFFER_LIST)
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/9211517c-f62e-4088-9555-c29570348c41)
 
-### <h1 id="header-4_4_5">4.4.5 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing</h1>
+### <h1 id="header-4_4_5">Lab steps to observe impact of bigger CTS buffers on setup and hold timing</h1>
 
 ```bash
 openroad
@@ -1573,7 +1573,7 @@ echo $::env(CTS_CLK_BUFFER_LIST)
 
 # <h1 id="header-5">Section 5 -Final step for RTL2GDS using tritinRoute and openSTA (19/03/2024 - 20/03/2024)</h1>
 
-### <h1 id="header-5_2_1">5.2.1 - Lab steps to build power distribution network</h1>
+### <h1 id="header-5_2_1">Lab steps to build power distribution network</h1>
 
 ```bash
 gen_pdn
