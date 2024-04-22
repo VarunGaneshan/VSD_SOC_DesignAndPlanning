@@ -1165,11 +1165,47 @@ Cell fall delay 50%-1.65 - time value = 30ps
 
 ### <h1 id="header-3_3_3">3.3.3 - Lab introduction to Magic tool options and DRC rules</h1>
 ### <h1 id="header-3_3_4">3.3.4 - Lab introduction to Sky130 pdk's and steps to download labs</h1>
-
-Sky130 Periphery rules: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
+```bash
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+tar xfz drc_tests.tgz
+cd drc_tests
+ls -al
+gvim .magicrcmagic -d 
+magic -d XR &
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b85ffd10-7a52-4100-ba58-e2053884d1a8)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6fe27f61-b5e2-4b6c-bcdb-add9ecebf17f)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/875c09fd-2aa5-4699-a82a-c761d7b76613)
 
 ### <h1 id="header-3_3_5">3.3.5 - Lab introduction to Magic and steps to load Sky130 tech-rules</h1>
+
+File -> Open -> met3.mag
+Sky130 Periphery rules: [Link](https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b1816e0a-1eb3-4fdc-8572-2eb825378e6a)
+
 ### <h1 id="header-3_3_6">3.3.6 - Lab exercise to fix poly.9 error in Sky130 tech-file</h1>
+poly.mag
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b7992cc4-012a-49a1-b973-0e62cb724a4e)
+
+```bash
+gvim sky130A.tech
+```
+change to allpolynonres rule
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/13f219bf-675e-446c-978b-5a8b6954fd72)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/edda916c-5a05-473b-9d27-261867266e7f)
+
+```bash
+tech load sky130A.tech
+drc check
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ec67eb9d-0c5c-4500-8b71-a7e20aa336b5)
+
+
+
 ### <h1 id="header-3_3_7">3.3.7 - Lab exercise to implement poly resistor spacing to diff and tap</h1>
 ### <h1 id="header-3_3_8">3.3.8 - Lab challenge exercise to describe DRC error as geometrical construct</h1>
 ### <h1 id="header-3_3_9">3.3.9 - Lab challenge to find missing or incorrect rules and fix them</h1>
