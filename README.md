@@ -183,7 +183,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
         <li><a href="#header-5_2_2">Detailed routing using TritonRoute and explore the routed layout</a></li>
         <li><a href="#header-5_3_4">Post-Route parasitic extraction using SPEF extractor& Final Layout</a></li>
       </ul>
-	
+</ul>
 <div class="toc">
   <ul>
 	<li><a href="#header-6">References</a></li>
