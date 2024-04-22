@@ -1664,13 +1664,70 @@ report_checks -path_delay min_max -fields {slew trans net cap input_pins} -forma
 exit
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/affe3111-ce0d-47fb-a693-d85ded29b559)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/79d7fc67-418f-4722-820e-689b7ed98816)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/812d2015-a71a-46da-8310-94dc58d5d6ff)
 
-
+This analysis is incorrect
 
 ### <h1 id="header-4_4_4">4.4.4 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment</h1>
+```bash
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+set ::env(CTS_CLK_BUFFER_LIST) [lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0]
+
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+echo $::env(CURRENT_DEF)
+
+set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/22-04_08-29/results/placement/picorv32a.placement.def
+
+run_cts
+
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5b9c3dae-231d-4b7d-93a7-4983180e0324)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/9211517c-f62e-4088-9555-c29570348c41)
+
 ### <h1 id="header-4_4_5">4.4.5 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing</h1>
+
+```bash
+openroad
+
+read_lef /openLANE_flow/designs/picorv32a/runs/22-04_08-29/tmp/merged.lef
+
+read_def /openLANE_flow/designs/picorv32a/runs/22-04_08-29/results/cts/picorv32a.cts.def
+
+write_db pico_cts1.db
+
+read_db pico_cts.db
+
+read_verilog /openLANE_flow/designs/picorv32a/runs/22-04_08-29/results/synthesis/picorv32a.synthesis_cts.v
+
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+link_design picorv32a
+
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+set_propagated_clock [all_clocks]
+
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+
+report_clock_skew -hold
+
+report_clock_skew -setup
+
+exit
+
+echo $::env(CTS_CLK_BUFFER_LIST)
+
+set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_sc_hd__clkbuf_1]
+
+echo $::env(CTS_CLK_BUFFER_LIST)
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/2e1b04bf-9b79-4faa-8dd0-63b36c90d7d5)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e9213640-f67f-43bf-98f7-e0a729ab83d4)
 
 # <h1 id="header-5">Section 5 -Final step for RTL2GDS using tritinRoute and openSTA (19/03/2024 - 20/03/2024)</h1>
 ## <h1 id="header-5_1">5.1 - Routing and design rule check (DRC)</h1>
