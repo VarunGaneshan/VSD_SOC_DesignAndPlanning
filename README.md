@@ -1625,3 +1625,10 @@ Final generated layout
 > [Openlane](https://github.com/The-OpenROAD-Project/OpenLane)
 
 > Repo Documentation format inspired from [Ms.Kalpana](https://github.com/kmkalpana2001/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/tree/main) , [Mr.Mohammed Fayiz Ferosh](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main?tab=readme-ov-file)
+
+# <h1 id="header-7">Acknowledgement</h1>	
+Dear Kunal Ghosh, Nickson P Jose, and R. Timothy Edwards,
+I want to express my heartfelt gratitude to each of you for your invaluable contributions and dedication during the workshop. Your expertise, guidance, and passion for teaching have truly made a significant impact on me.Thank you for your time, energy, and commitment to nurturing the next generation of engineers.
+
+With deep appreciation,
+Varun 
