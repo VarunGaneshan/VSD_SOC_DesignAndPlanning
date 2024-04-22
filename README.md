@@ -1,4 +1,4 @@
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/36fbd730-a533-438d-b4aa-fbe1fa12435f)![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dc37df2b-0705-4253-b111-cad5c1116df8)![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4ad50bf0-4e29-4e35-8253-84b8ca9a2d16)# Digital VLSI SoC Design and Planning
+# Digital VLSI SoC Design and Planning
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
