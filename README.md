@@ -1596,6 +1596,31 @@ Verified that the netlist is overwritten by checking that instance _14506_ is re
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/05df8dd8-a4f6-4870-8b9a-72ff498055ee)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5a348a52-dc0a-4f86-9513-e6c137ea552b)
 
+Since we confirmed that netlist is replaced and will be loaded in PnR but since we want to follow up on the earlier 0 violation design we are continuing with the clean design to further stages
+
+```bash
+prep -design picorv32a -tag 22-04_08-29 -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+set ::env(SYNTH_SIZING) 1
+run_synthesis
+
+init_floorplan
+place_io
+tap_decap_or
+
+run_placement
+
+unset ::env(LIB_CTS)
+run_cts
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d5ec414e-b2cb-4480-930f-5bc553238af4)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/59841774-e0e3-4124-8e8d-fdb722579306)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ff884989-1b51-4e99-97aa-9b045846a47b)
+
+
 ### <h1 id="header-4_3_4">4.3.4 - Lab steps to verify CTS runs</h1>
 
 ## <h1 id="header-4_4">4.4 - Timing analysis with real clock using openSTA</h1>
