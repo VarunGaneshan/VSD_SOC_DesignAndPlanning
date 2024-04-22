@@ -1,4 +1,4 @@
-# Digital VLSI SoC Design and Planning
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b9034cf2-eac7-4bc1-8d53-e2ebe4c96ab3)# Digital VLSI SoC Design and Planning
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
@@ -1735,16 +1735,55 @@ echo $::env(CTS_CLK_BUFFER_LIST)
 ### <h1 id="header-5_1_2">5.1.2 - LeeÃ s Algorithm conclusion</h1>
 ### <h1 id="header-5_1_3">5.1.3 - Design Rule Check</h1>
 
+
 ## <h1 id="header-5_2">5.2 - Power Distribution Network and routing</h1>
 ### <h1 id="header-5_2_1">5.2.1 - Lab steps to build power distribution network</h1>
-### <h1 id="header-5_2_2">5.2.2 - Lab steps from power straps to std cell power</h1>
-### <h1 id="header-5_2_3">5.2.3 - Basics of global and detail routing and configure TritonRoute</h1>
 
-## <h1 id="header-5_3">5.3 - TritonRoute Features</h1>
-### <h1 id="header-5_3_1">5.3.1 - TritonRoute feature 1 - Honors pre-processed route guides</h1>
-### <h1 id="header-5_3_2">5.3.2 - TritonRoute Feature2 & 3 - Inter-guide connectivity and intra- & inter-layer routing</h1>
-### <h1 id="header-5_3_3">5.3.3 - TritonRoute method to handle connectivity</h1>
+```bash
+gen_pdn
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/48cfb62b-af40-48a1-a39b-69f189117fe9)
+
+Load PDN def
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-04_08-29/tmp/floorplan/
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 19-pdn.def &
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/aca1bc83-ab38-4d7d-b10a-31eb13c3b0ff)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/0bdfaebd-acea-4b27-a027-220449bd5c99)
+
+### <h1 id="header-5_2_2">Detailed routing using TritonRoute and explore the routed layout.</h1>
+
+```bash
+echo $::env(CURRENT_DEF)
+run_routing
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a4653f78-b816-4d1f-b41b-9def36ce4df1)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5abbae2c-c1aa-415a-95c2-82ef6ca30172)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4f214f0c-f629-47b5-bc0a-f58e7271af82)
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-04_08-29/results/routing/
+
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f18e6cc1-5aaf-47b2-ab6d-0b60dd468035)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/091c5df8-665d-4f59-afbd-2dc44a61fe44)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/cb4127df-68d7-458d-969a-6a4d58c162ea)
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-04_08-29/tmp/routing
+gvim 20-fastroute.guide
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6dce73b4-6f6a-4f34-a42e-4299527e7908)
+
+
+
 ### <h1 id="header-5_3_4">5.3.4 - Routing topology algorithm and final files list post-route</h1>
+
+
+
 
 # <h1 id="header-6">References</h1>	
 > https://futureskillsprime.in/course/digital-vlsi-soc-design-and-planning
