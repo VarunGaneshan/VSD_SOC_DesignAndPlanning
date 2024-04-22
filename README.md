@@ -1,4 +1,4 @@
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8d029888-6628-4505-87d7-f2dd20cad2ee)# Digital VLSI SoC Design and Planning
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/36fbd730-a533-438d-b4aa-fbe1fa12435f)![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dc37df2b-0705-4253-b111-cad5c1116df8)![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4ad50bf0-4e29-4e35-8253-84b8ca9a2d16)# Digital VLSI SoC Design and Planning
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
@@ -1417,36 +1417,32 @@ run_synthesis
 gvim pre_sta.conf
 set_cmd_units -time ns -capacitance pF -current mA -voltage V -resistance kOhm -distance um
 
-read_liberty -max /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32
-a/src/sky130_fd_sc_hd_slow.lib
+read_liberty -max /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib
 
-read_liberty -min /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32
-a/src/sky130_fd_sc_hd_fast.lib
+read_liberty -min /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib
 
-read_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/run
-s/22-04_09-28/results/synthesis/picorv32a.synthesis.v
+read_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-04_09-28/results/synthesis/picorv32a.synthesis.v
 
 link_design picorv32a
 
-read_sdc /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/my_
-base.sdc
+read_sdc /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/my_base.sdc
 
 report_checks -path_delay min_max -fields {slew trans net cap input_pin}
 report_tns
 report_wns
 ```
 Created pre_sta.conf for STA analysis in openlane directory 
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dfefe09b-6a7e-4060-82a8-b7a4e69bb903)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/9f313a4f-7143-45ad-a107-783edececee1)
 
 ```bash
-set :: env(CLOCK_PORT) clk
-set :: env(CLOCK_PERIOD) 24.73
-#set :: env(SYNTH_DRIVING_CELL) sky130_varun
-set :: env(SYNTH_DRIVING CELL) sky130_fd_sc_hd_inv_8
-set :: env(SYNTH DRIVING_CELL_PIN) Y
-set :: env(SYNTH_CAP_LOAD) 17.653
-set :: env(I0_PCT) 0.2
-set :: env(SYNTH_MAX_FANOUT) 6
+set ::env(CLOCK_PORT) clk
+set ::env(CLOCK_PERIOD) 24.73
+#set ::env(SYNTH_DRIVING_CELL) sky130_vsdinv
+set ::env(SYNTH_DRIVING_CELL) sky130_fd_sc_hd__inv_8
+set ::env(SYNTH_DRIVING_CELL_PIN) Y
+set ::env(SYNTH_CAP_LOAD) 17.653
+set ::env(IO_PCT) 0.2
+set ::env(SYNTH_MAX_FANOUT) 6
 
 create_clock [get_ports $::env(CLOCK_PORT)]  -name $::env(CLOCK_PORT)  -period $::env(CLOCK_PERIOD)
 set input_delay_value [expr $::env(CLOCK_PERIOD) * $::env(IO_PCT)]
@@ -1472,19 +1468,134 @@ set_driving_cell -lib_cell $::env(SYNTH_DRIVING_CELL) -pin $::env(SYNTH_DRIVING_
 set cap_load [expr $::env(SYNTH_CAP_LOAD) / 1000.0]
 puts "\[INFO\]: Setting load to: $cap_load"
 set_load  $cap_load [all_outputs]
+
 ```
 
 Created my_base.sdc for STA analysis in openlane/designs/picorv32a/src directory based on the file openlane/scripts/base.sdc
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/aa083ed9-caa7-423f-9a35-22e8a419400d)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e89ef606-edc7-4547-ba5e-b26da6141de9)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f9646992-24be-4e9e-887b-c6ce09fbfb69)
+
+```bash
+sta pre_sta.conf
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/2b7dda9d-fbba-4849-b900-f2e7e353dba9)
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/181efd70-6975-404a-b3da-e4847e3db807)
 
 ### <h1 id="header-4_2_4">4.2.4 - Lab steps to optimize synthesis to reduce setup violations</h1>
+
+Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again
+
+```bash
+prep -design picorv32a -tag 22-04_08-29 -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+set ::env(SYNTH_SIZING) 1
+set ::env(SYNTH_MAX_FANOUT) 4
+echo $::env(SYNTH_DRIVING_CELL)
+run_synthesis
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/c64646cf-eafc-4007-b230-731569748ea8)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/b3a4a632-635d-48fd-8d6b-acdbbb02e636)
+
+Make changes in pre_sta.conf 
+
+```bash
+sta pre_sta.conf
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/9966ad10-d4a9-4851-9c61-ad9e45b7f860)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/dc460a62-1ab1-4cc4-ac04-a67b7795d88d)
+
+OR gate of drive strength 2 is driving 4 fanouts
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/0580d31f-336c-4529-b0f2-76781687cb15)
+
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+
+```bash
+report_net -connections _11672_
+help replace_cell
+replace_cell _14510_ sky130_fd_sc_hd__or3_4
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+We observe slack is reduced
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/83093846-a77e-4044-bcae-436d93e8b84a)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e589b902-69a8-4b3a-a921-6c69b42fefb7)
+
+Another OR gate of drive strength 2 is driving 4 fanouts
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/72d5a803-2c07-4e49-9f2f-8ff7c1bf48bd)
+
+```bash
+report_net -connections _11675_
+replace_cell _14514_ sky130_fd_sc_hd__or3_4
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+We observe slack is reduced again 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4517abf5-f99a-4d25-a1cd-c18a4c8b60c3)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8067e205-0f89-49ce-9bc7-eaf1a4a4bc99)
+
 ### <h1 id="header-4_2_5">4.2.5 - Lab steps to do basic timing ECO</h1>
+
+OR gate of drive strength 2 driving OA gate has more delay
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a92f9dc0-ec20-4134-853c-c45d4a621269)
+
+```bash
+report_net -connections _11643_
+replace_cell _14481_ sky130_fd_sc_hd__or4_4
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+We observe slack is reduced again 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/06263831-3cdc-4b8b-8f41-df67599d4dcb)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e7c6af99-a357-4980-ae4e-e719bda16700)
+
+Another OR gate of drive strength 2 driving OA gate has more delay
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/0e7e2cbe-a9bf-465b-aaab-ad999ddf66d1)
+
+```bash
+report_net -connections _11668_
+replace_cell _14506_ sky130_fd_sc_hd__or4_4
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+We observe slack is reduced again 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4f3250fb-ab5d-4760-9210-20e37a58af23)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/095b690d-435d-42d5-94bb-304aef242326)
+
+
+Verify instance _14506_ is replaced with sky130_fd_sc_hd__or4_4
+```bash
+report_checks -from _29043_ -to _30440_ -through _14506_
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/78eea0d7-4e50-4007-8263-85c17b3db379)
+
+Around 1.2827 ns of violation reduced.
 
 ## <h1 id="header-4_3">4.3 - Clock tree synthesis TritonCTS and signal integrity</h1>
 ### <h1 id="header-4_3_1">4.3.1 - Clock tree routing and buffering using H-Tree algorithm</h1>
 ### <h1 id="header-4_3_2">4.3.2 - Crosstalk and clock net shielding</h1>
+
 ### <h1 id="header-4_3_3">4.3.3 - Lab steps to run CTS using Triton</h1>
+Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/ 22-04_08-29/results/synthesis/
+ls
+cp picorv32a.synthesis.v picorv32a.synthesis_old.v
+ls
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/df64c4e1-694c-43e4-8641-4e75db996ef4)
+
+```bash
+help write_verilog
+write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-04_08-29/results/synthesis/picorv32a.synthesis.v
+exit
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d7b6b837-ea7f-4e36-815e-28d9632eb532)
+
+Verified that the netlist is overwritten by checking that instance _14506_ is replaced with sky130_fd_sc_hd__or4_4
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/05df8dd8-a4f6-4870-8b9a-72ff498055ee)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5a348a52-dc0a-4f86-9513-e6c137ea552b)
+
 ### <h1 id="header-4_3_4">4.3.4 - Lab steps to verify CTS runs</h1>
 
 ## <h1 id="header-4_4">4.4 - Timing analysis with real clock using openSTA</h1>
