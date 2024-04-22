@@ -1777,13 +1777,15 @@ cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-04
 gvim 20-fastroute.guide
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6dce73b4-6f6a-4f34-a42e-4299527e7908)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d2d9589c-dd61-4da0-8278-95a4e7390876)
 
+### <h1 id="header-5_3_4">Post-Route parasitic extraction using SPEF extractor</h1>
 
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/193a8311-3448-4bbd-ae7c-6b1b3e156f88)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/00d88204-5737-4a8b-b51a-6401d44ea378)
 
-### <h1 id="header-5_3_4">5.3.4 - Routing topology algorithm and final files list post-route</h1>
-
-
-
+Final generated layout
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/feb008d4-b448-45b8-8b2e-8bee3ff64aea)
 
 # <h1 id="header-6">References</h1>	
 > https://futureskillsprime.in/course/digital-vlsi-soc-design-and-planning
