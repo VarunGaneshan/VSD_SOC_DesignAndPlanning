@@ -1197,6 +1197,8 @@ change to allpolynonres rule
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/13f219bf-675e-446c-978b-5a8b6954fd72)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/edda916c-5a05-473b-9d27-261867266e7f)
 
+### <h1 id="header-3_3_7">3.3.7 - Lab exercise to implement poly resistor spacing to diff and tap</h1>
+
 ```bash
 tech load sky130A.tech
 drc check
@@ -1204,11 +1206,50 @@ drc check
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ec67eb9d-0c5c-4500-8b71-a7e20aa336b5)
 
-
-
-### <h1 id="header-3_3_7">3.3.7 - Lab exercise to implement poly resistor spacing to diff and tap</h1>
 ### <h1 id="header-3_3_8">3.3.8 - Lab challenge exercise to describe DRC error as geometrical construct</h1>
+
+nwell.mag
+```bash
+% cif ostyle drc
+% cif see dnwell_shrink
+% feed clear
+% cif see nwell_missing
+% feed clear
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/74d08d5c-4a9e-479a-bed9-ae55e6a4a3cf)
+
+
 ### <h1 id="header-3_3_9">3.3.9 - Lab challenge to find missing or incorrect rules and fix them</h1>
+Not a simple edge rule 
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/9e24c712-5ae5-494b-bf6b-1764d80b32ff)
+
+```bash
+ templayer nwell_tapped
+ bloat-all nsc nwell
+
+ templayer nwell_untapped nwell
+ and-not nwell_tapped
+
+ variants (full)
+  cifmaxwidth nwell_untapped 0 bend_illegal \
+  "Nwell missing tap (nwell.4)"
+ variants *
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a58b9eca-ff90-4116-8427-40a096da320b)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6fa616e5-b844-4458-be41-b26acd3bc29e)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/563ad423-e2c6-4505-a2f8-1de880add63e)
+
+```bash
+% tech load sky130A.tech
+% drc style drc(full)
+% drc check
+% drc why
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4f0566e3-ead5-44dd-96c6-16b54c9a3c4b)
+
 
 # <h1 id="header-4">Section 4 - Pre-layout timing analysis and importance of good clock tree (17/03/2024 - 18/03/2024)</h1>
 ## <h1 id="header-4_1">4.1 - Timing modeling using delay tables</h1>
