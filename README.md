@@ -901,7 +901,7 @@ Custom CMOS inverter
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/22c2fae7-8d3d-4ae6-b940-6eda022f13b6)
 
 
-## <h1 id="header-3_2">Inception of layout ̂A CMOS faabrication process</h1>
+## <h1 id="header-3_2">Inception of layout ̂A CMOS fabrication process</h1>
 
 ### <h1 id="header-3_2_8">Lab introduction to Sky130 basic layers layout and LEF using inverter</h1>
 
