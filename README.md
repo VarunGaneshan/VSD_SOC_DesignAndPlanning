@@ -1605,28 +1605,70 @@ add_lefs -src $lefs
 set ::env(SYNTH_STRATEGY) "DELAY 3"
 set ::env(SYNTH_SIZING) 1
 run_synthesis
-
 init_floorplan
 place_io
 tap_decap_or
-
 run_placement
-
-unset ::env(LIB_CTS)
 run_cts
 ```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d5ec414e-b2cb-4480-930f-5bc553238af4)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/59841774-e0e3-4124-8e8d-fdb722579306)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ff884989-1b51-4e99-97aa-9b045846a47b)
-
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/32adde6e-14ff-4a9e-9269-0847f74e90fd)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/fafecfe0-0af8-4bef-a684-563ac4b2262b)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/c53ccb89-1e3f-424e-baa1-433530859f99)
 
 ### <h1 id="header-4_3_4">4.3.4 - Lab steps to verify CTS runs</h1>
+
+```bash
+echo $::env(LIB_SYNTH_COMPLETE)
+echo $::env(LIB_TYPICAL)
+echo $::env(CURRENT_DEF)
+echo $::env(SYNTH_MAX_TRAN)
+echo $::env(CTS_MAX_CAP)
+echo $::env(CTS_CLK_BUFFER_LIST)
+echo $::env(CTS_ROOT_BUFFER)
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/03d70742-c902-46ab-a2bc-0cda353c7cb1)
 
 ## <h1 id="header-4_4">4.4 - Timing analysis with real clock using openSTA</h1>
 ### <h1 id="header-4_4_1">4.4.1 - Setup timing analysis using real clocks</h1>
 ### <h1 id="header-4_4_2">4.4.2 - Hold timing analysis using real clocks</h1>
 ### <h1 id="header-4_4_3">4.4.3 - Lab steps to analyze timing with real clocks using OpenSTA</h1>
+```bash
+openroad
+
+read_lef /openLANE_flow/designs/picorv32a/runs/22-04_08-29/tmp/merged.lef
+
+read_def /openLANE_flow/designs/picorv32a/runs/22-04_08-29/results/cts/picorv32a.cts.lef
+
+write_db pico_cts.db
+
+read_db pico_cts.db
+
+read_verilog /openLANE_flow/designs/picorv32a/runs/22-04_08-29/results/synthesis/picorv32a.synthesis_cts.v
+
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+link_design picorv32a
+
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+set_propagated_clock [all_clocks]
+
+help report_checks
+
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+
+exit
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/affe3111-ce0d-47fb-a693-d85ded29b559)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/79d7fc67-418f-4722-820e-689b7ed98816)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/812d2015-a71a-46da-8310-94dc58d5d6ff)
+
+
+
 ### <h1 id="header-4_4_4">4.4.4 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment</h1>
 ### <h1 id="header-4_4_5">4.4.5 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing</h1>
 
