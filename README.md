@@ -60,10 +60,6 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
    	 <li><a href="#header-2_1">Chip Floor planning consideration</a>
  		 <ul>
    		 <li><a href="#header-2_1_1">Utilization factor and aspect ratio</a></li>
-   		 <li><a href="#header-2_1_2">Concept of pre-placed cells</a></li>
-   		 <li><a href="#header-2_1_3">De-coupling capacitors</a></li>
-   		 <li><a href="#header-2_1_4">Power planning</a></li>
-   		 <li><a href="#header-2_1_5">Pin placement and logical cell placement blockage</a></li>
    		 <li><a href="#header-2_1_6">Steps to run floorplan using OpenLANE</a></li>
    		 <li><a href="#header-2_1_7">Review floorplan files and steps to view floorplan</a></li>
    		 <li><a href="#header-2_1_8">Review floorplan layout in Magic</a></li>
@@ -185,7 +181,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
     <ul>
         <li><a href="#header-5_2_1">Lab steps to build power distribution network</a></li>
         <li><a href="#header-5_2_2">Detailed routing using TritonRoute and explore the routed layout</a></li>
-        <li><a href="#header-5_3_4">Post-Route parasitic extraction using SPEF extractor</a></li>
+        <li><a href="#header-5_3_4">Post-Route parasitic extraction using SPEF extractor& Final Layout</a></li>
       </ul>
 	
 <div class="toc">
@@ -725,11 +721,6 @@ Aspect\ Ratio = \frac{2}{4} = 0.5
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/15f63572-2841-4b1c-a370-effd713d32b5)
 
-### <h1 id="header-2_1_2">2.1.2 - Utilization factor and aspect ratio</h1>
-### <h1 id="header-2_1_3">2.1.3 - De-coupling capacitors</h1>
-### <h1 id="header-2_1_4">2.1.4 - Power planning</h1>
-### <h1 id="header-2_1_5">2.1.5 - Pin placement and logical cell placement blockage</h1>
-
 ### <h1 id="header-2_1_6">2.1.6 - Steps to run floorplan using OpenLANE</h1>
 
 ```bash
@@ -825,10 +816,6 @@ Place cursor on object and Press S,open tkcon app and type what
 
 ## <h1 id="header-2_2">2.2 - Library building and Placement</h1>
 
-### <h1 id="header-2_2_1">2.2.1 - Netlist binding and initial place design</h1>
-### <h1 id="header-2_2_2">2.2.2 - Optimize placement using estimated wire-length and capacitance</h1>
-### <h1 id="header-2_2_3">2.2.3 - Final placement optimization</h2>
-### <h1 id="header-2_2_4">2.2.4 - Need for libraries and characterization</h1>
 ### <h1 id="header-2_2_5">2.2.5 - Congestion aware placement using RePlAce</h1>
 
 ```bash
@@ -846,18 +833,6 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 standard cells are correctly placed in standard cell rows
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e60edef2-15f6-432f-af03-3e8538d71bf6)
-
-## <h1 id="header-2_3">2.3 - Cell design and characterization flows</h1>
-
-### <h1 id="header-2_3_1">2.3.1 - Inputs for cell design flow</h1>
-### <h1 id="header-2_3_2">2.3.2 - Circuit design steps</h1>
-### <h1 id="header-2_3_3">2.3.3 - Layout design step</h1>
-### <h1 id="header-2_3_4">2.3.4 - Typical characterization flow</h1>
-
-## <h1 id="header-2_4">2.4 - General timing characterization parameters</h1>
-
-### <h1 id="header-2_4_1">2.4.1 - Timing threshold definitions</h1>
-### <h1 id="header-2_4_2">2.4.2 - Propagation delay and transition time</h1>
 
 
 # <h1 id="header-3">Section 3 - Design library cell using Magic Layout and ngspice characterization (15/03/2024 - 16/03/2024)</h1>
@@ -895,10 +870,6 @@ Pins are not equidistant here
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/1a2dfa49-dfd9-45ef-9a43-3a1601631051)
 
-### <h1 id="header-3_1_2">3.1.2 - SPICE deck creation for CMOS inverter</h1>
-### <h1 id="header-3_1_3">3.1.3 - SPICE simulation lab for CMOS inverter</h1>
-### <h1 id="header-3_1_4"> 3.1.4 - Switching Threshold Vm</h1>
-### <h1 id="header-3_1_5">3.1.5 - Static and dynamic simulation of CMOS inverter</h1>
 ### <h1 id="header-3_1_6">3.1.6 - Lab steps to git clone vsdstdcelldesign</h1>
 
 ```bash
@@ -926,13 +897,7 @@ Custom CMOS inverter
 
 
 ## <h1 id="header-3_2">3.2 - Inception of layout ̂A CMOS faabrication process</h1>
-### <h1 id="header-3_2_1">3.2.1 - Create Active regions</h1>
-### <h1 id="header-3_2_2">3.2.2 - Formation of N-well and P-well</h1>
-### <h1 id="header-3_2_3">3.2.3 - Formation of gate terminal</h1>
-### <h1 id="header-3_2_4">3.2.4 - Lightly doped drain (LDD) formation</h1>
-### <h1 id="header-3_2_5">3.2.5 - Source Ã  drain formation</h1>
-### <h1 id="header-3_2_6">3.2.6 - Local interconnect formation</h1>
-### <h1 id="header-3_2_7">3.2.7 - Higher level metal formation</h1>
+
 ### <h1 id="header-3_2_8">3.2.8 - Lab introduction to Sky130 basic layers layout and LEF using inverter</h1>
 
 Polycross N-diffusion -PMOS
@@ -1045,7 +1010,6 @@ Cell fall delay 50%-1.65 - time value = 30ps
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4a68051c-a858-4894-8852-3e6a66115ee5)
 
-### <h1 id="header-3_3_3">3.3.3 - Lab introduction to Magic tool options and DRC rules</h1>
 ### <h1 id="header-3_3_4">3.3.4 - Lab introduction to Sky130 pdk's and steps to download labs</h1>
 ```bash
 wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
@@ -1192,10 +1156,6 @@ ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
 ```
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/91400b7f-96de-4d77-8cb7-f01d24ffe8b1)
 
-### <h1 id="header-4_1_3">4.1.3 - Introduction to timing libs and steps to include new cell in synthesis</h1>
-### <h1 id="header-4_1_4">4.1.4 - Introduction to delay tables</h1>
-### <h1 id="header-4_1_5">4.1.5 - Delay table usage Part 1</h1>
-### <h1 id="header-4_1_6">4.1.6 - Delay table usage Part 2</h1>
 ### <h1 id="header-4_1_7">4.1.7 - Lab steps to configure synthesis settings to fix slack and include vsdinv</h1>
 ```bash
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a
@@ -1275,8 +1235,6 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 
 ## <h1 id="header-4_2">4.2 - Timing analysis with ideal clocks using openSTA</h1>
-### <h1 id="header-4_2_1">4.2.1 - Setup timing analysis and introduction to flip-flop setup time</h1>
-### <h1 id="header-4_2_2">4.2.2 - Introduction to clock jitter and uncertainty</h1>
 ### <h1 id="header-4_2_3">4.2.3 - Lab steps to configure OpenSTA for post-synth timing analysis</h1>
 
 Since we are having 0 wns after improved timing run we are going to do timing analysis on initial run of synthesis which has lots of violations and no parameters were added to improve timing
@@ -1454,8 +1412,6 @@ report_checks -from _29043_ -to _30440_ -through _14506_
 Around 1.2827 ns of violation reduced.
 
 ## <h1 id="header-4_3">4.3 - Clock tree synthesis TritonCTS and signal integrity</h1>
-### <h1 id="header-4_3_1">4.3.1 - Clock tree routing and buffering using H-Tree algorithm</h1>
-### <h1 id="header-4_3_2">4.3.2 - Crosstalk and clock net shielding</h1>
 
 ### <h1 id="header-4_3_3">4.3.3 - Lab steps to run CTS using Triton</h1>
 Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
@@ -1515,8 +1471,7 @@ echo $::env(CTS_ROOT_BUFFER)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/03d70742-c902-46ab-a2bc-0cda353c7cb1)
 
 ## <h1 id="header-4_4">4.4 - Timing analysis with real clock using openSTA</h1>
-### <h1 id="header-4_4_1">4.4.1 - Setup timing analysis using real clocks</h1>
-### <h1 id="header-4_4_2">4.4.2 - Hold timing analysis using real clocks</h1>
+
 ### <h1 id="header-4_4_3">4.4.3 - Lab steps to analyze timing with real clocks using OpenSTA</h1>
 ```bash
 openroad
@@ -1612,13 +1567,7 @@ echo $::env(CTS_CLK_BUFFER_LIST)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e9213640-f67f-43bf-98f7-e0a729ab83d4)
 
 # <h1 id="header-5">Section 5 -Final step for RTL2GDS using tritinRoute and openSTA (19/03/2024 - 20/03/2024)</h1>
-## <h1 id="header-5_1">5.1 - Routing and design rule check (DRC)</h1>
-### <h1 id="header-5_1_1">5.1.1 - Introduction to Maze Routing Ã  LeeÃ s algorithm</h1>
-### <h1 id="header-5_1_2">5.1.2 - LeeÃ s Algorithm conclusion</h1>
-### <h1 id="header-5_1_3">5.1.3 - Design Rule Check</h1>
 
-
-## <h1 id="header-5_2">5.2 - Power Distribution Network and routing</h1>
 ### <h1 id="header-5_2_1">5.2.1 - Lab steps to build power distribution network</h1>
 
 ```bash
@@ -1661,7 +1610,7 @@ gvim 20-fastroute.guide
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6dce73b4-6f6a-4f34-a42e-4299527e7908)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d2d9589c-dd61-4da0-8278-95a4e7390876)
 
-### <h1 id="header-5_3_4">Post-Route parasitic extraction using SPEF extractor</h1>
+### <h1 id="header-5_3_4">Post-Route parasitic extraction using SPEF extractor & Final Layout</h1>
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/193a8311-3448-4bbd-ae7c-6b1b3e156f88)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/00d88204-5737-4a8b-b51a-6401d44ea378)
