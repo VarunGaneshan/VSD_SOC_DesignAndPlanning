@@ -190,6 +190,11 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
   </ul>
 </div>
 
+<div class="toc">
+  <ul>
+	<li><a href="#header-7">Acknowledgement</a></li>
+  </ul>
+</div>
 </body>
 </html>
 
