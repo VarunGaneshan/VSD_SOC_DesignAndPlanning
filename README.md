@@ -1,4 +1,4 @@
-# Digital VLSI SoC Design and Planning
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8d029888-6628-4505-87d7-f2dd20cad2ee)# Digital VLSI SoC Design and Planning
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
@@ -1238,7 +1238,6 @@ Not a simple edge rule
 ```
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a58b9eca-ff90-4116-8427-40a096da320b)
-![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6fa616e5-b844-4458-be41-b26acd3bc29e)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/563ad423-e2c6-4505-a2f8-1de880add63e)
 
 ```bash
@@ -1253,13 +1252,145 @@ Not a simple edge rule
 
 # <h1 id="header-4">Section 4 - Pre-layout timing analysis and importance of good clock tree (17/03/2024 - 18/03/2024)</h1>
 ## <h1 id="header-4_1">4.1 - Timing modeling using delay tables</h1>
+
 ### <h1 id="header-4_1_1">4.1.1 - Lab steps to convert grid info to track info</h1>
+
+```bash
+Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/9427e9d2-39f8-42e4-a15a-df4347391442)
+
+```bash
+less tracks.info
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f02ca141-a354-4730-8973-575907e37734)
+
+```bash
+help grid
+```
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/ff22addf-799b-4337-836b-77af6eae666f)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/652a530b-6be9-40ea-93d8-5edf4b9d57bd)
+
+```bash
+grid 0.46um 0.34um 0.23um 0.17um
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/37db7043-3822-467a-8b26-00ec4684f1be)
+
+Ports lie on the intersection of the vertical and horizontal tracks.Width of the standard cell should be odd multiples of the horizontal track pitch.Height of the standard cell should be even multiples of the vertical track pitch.
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/75e87b2a-2372-432c-b474-8a0464570636)
+
+
+
 ### <h1 id="header-4_1_2">4.1.2 - Lab steps to convert magic layout to std cell LEF</h1>
+
+Defining ports
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/7faa7519-2579-46a6-86b0-fd7926f1cdb2)
+
+```bash
+save sky130_varun.mag #custom name
+lef write
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/432bd01b-c2a4-4cfc-8b9a-6742d5e5a375)
+
+```bash
+less sky130_varun.lef
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/3416df13-b680-42dd-8478-8825e752b451)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5fa9b66c-71e7-4259-9a3d-c28977c8353e)
+
+Copy necessary files to 'picorv32a' design 'src' directory
+```bash
+cp sky130_varun.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/91400b7f-96de-4d77-8cb7-f01d24ffe8b1)
+
 ### <h1 id="header-4_1_3">4.1.3 - Introduction to timing libs and steps to include new cell in synthesis</h1>
 ### <h1 id="header-4_1_4">4.1.4 - Introduction to delay tables</h1>
 ### <h1 id="header-4_1_5">4.1.5 - Delay table usage Part 1</h1>
 ### <h1 id="header-4_1_6">4.1.6 - Delay table usage Part 2</h1>
 ### <h1 id="header-4_1_7">4.1.7 - Lab steps to configure synthesis settings to fix slack and include vsdinv</h1>
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8f502c5c-5c4f-411d-845d-aaa74cb72384)
+
+Edit config.tcl to include the added lef and change library to ones we added in src directory
+```bash
+set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+
+set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+```
+
+```bash
+package require openlane 0.9
+prep -design picorv32a
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+run_synthesis
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/5b5df876-e663-4b28-b24a-ab811dcfa957)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/948490cd-cbb5-4b28-9c91-5abfdcc3996c)
+
+Note down values of newly introduced violations with the introduction of custom inverter cell
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/216d964c-9d53-4b14-a9bf-a260ecfd2dd0)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8a9119db-ffbb-4448-a77f-9a52a24861f3)
+
+Stratergy to reduce the violations 
+
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/c17bedc3-7372-4b2c-abb9-663d2f4c8e31)
+```bash
+prep -design picorv32a -tag 22-04_08-29 -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+echo $::env(SYNTH_STRATEGY) # Command to display current value of variable SYNTH_STRATEGY
+set ::env(SYNTH_STRATEGY) "DELAY 3" # Command to set new value for SYNTH_STRATEGY
+echo $::env(SYNTH_BUFFERING)# Command to display current value of variable SYNTH_BUFFERING to check whether it's enabled
+echo $::env(SYNTH_SIZING) # Command to display current value of variable SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1 # Command to set new value for SYNTH_SIZING
+echo $::env(SYNTH_DRIVING_CELL) # Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not
+run_synthesis
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/eb3a39b3-2e0d-4e3c-b1bf-0f62fa2d6bbd)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4c856a14-8108-4bae-b224-3504d6a6c732)
+
+Area has increased,Worst negative slack has become 0
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a3dca152-827d-485b-853d-0cbc7d637cd6)
+
+```bash
+run_floorplan
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/759cfb53-3207-4a4b-93c4-aad245ea677b)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/4d804445-e7e8-49ec-a496-3c696da8abcd)
+
+Since we are facing unexpected un-explainable error while using run_floorplan command,run the below instead
+```bash
+init_floorplan
+place_io
+tap_decap_or
+run_placement
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/adc1a288-125a-4db6-877a-588ad5096eac)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/8e51965a-257f-4cc3-9e37-3cb5aa24ee64)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/a915d260-fca4-440d-a6f7-4b594ff78d9e)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/e5931a02-d713-4a3b-8c65-683ef108f653)
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-04_08-29/results/placement/
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f1401aa7-17f1-4850-ab12-d2a29272c3f7)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/f8bdf49b-86d7-42d2-8614-437aa8cd95bd)
+![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6830afae-cef6-4cb0-9940-df21d9dc65b0)
+
 
 ## <h1 id="header-4_2">4.2 - Timing analysis with ideal clocks using openSTA</h1>
 ### <h1 id="header-4_2_1">4.2.1 - Setup timing analysis and introduction to flip-flop setup time</h1>
