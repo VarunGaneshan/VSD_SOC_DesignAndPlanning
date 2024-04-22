@@ -183,7 +183,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
   <ul>
     <li><a href="#header-5">Section 5 - Final step for RTL2GDS using tritinRoute and openSTA (19/04/2024 - 20/03/2024)</a></li>
     <ul>
-        <li><a href="#header-5_1">Power Distribution Network and routing</a></li>
+        <li><a href="#header-5_1">Lab steps to build power distribution network</a></li>
         <li><a href="#header-5_2">Detailed routing using TritonRoute and explore the routed layout</a></li>
         <li><a href="#header-5_3">Post-Route parasitic extraction using SPEF extractor</a></li>
       </ul>
