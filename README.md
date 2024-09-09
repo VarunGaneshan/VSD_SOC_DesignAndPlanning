@@ -1,7 +1,5 @@
 # Digital VLSI SoC Design and Planning
 
-![image](https://github.com/user-attachments/assets/390cb9c3-bfc7-4900-bc8a-929490475e50)
-
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
 
@@ -197,9 +195,13 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
 	<li><a href="#header-7">Acknowledgement</a></li>
   </ul>
 </div>
+<div class="toc">
+  <ul>
+	<li><a href="#header-8">Course Completion Certificate</a></li>
+  </ul>
+</div>
 </body>
 </html>
-
 # <h1 id="header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </h1>	 
 
 ## <h1 id="header-1_1">How to talk to computers?</h1>
@@ -1641,3 +1643,6 @@ I want to express my heartfelt gratitude to each of you for your invaluable cont
 With deep appreciation,
 
 Varun 
+
+# <h1 id="header-8 ">Course Completion Certificate</h1>
+![image](https://github.com/user-attachments/assets/390cb9c3-bfc7-4900-bc8a-929490475e50)
