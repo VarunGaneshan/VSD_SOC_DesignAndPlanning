@@ -1,5 +1,7 @@
 # Digital VLSI SoC Design and Planning
 
+![image](https://github.com/user-attachments/assets/390cb9c3-bfc7-4900-bc8a-929490475e50)
+
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
 
