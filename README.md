@@ -2,12 +2,6 @@
 ![Static Badge](https://img.shields.io/badge/OS-linux-orange)
 ![Static Badge](https://img.shields.io/badge/EDA%20Tools-OpenLANE--Flow%2C_Yosys%2C_abc%2C_OpenROAD%2C_TritonRoute%2C_OpenSTA%2C_magic%2C_netgen%2C_GUNA-navy)
 ![Static Badge](https://img.shields.io/badge/languages-verilog%2C_bash%2C_TCL-crimson)
-![GitHub last commit](https://img.shields.io/github/last-commit/VarunGaneshan/VSD_SOC_DesignAndPlanning)
-![GitHub language count](https://img.shields.io/github/languages/count/VarunGaneshan/VSD_SOC_DesignAndPlanning)
-![GitHub top language](https://img.shields.io/github/languages/top/VarunGaneshan/VSD_SOC_DesignAndPlanning)
-![GitHub repo size](https://img.shields.io/github/repo-size/VarunGaneshan/VSD_SOC_DesignAndPlanning)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/VarunGaneshan/VSD_SOC_DesignAndPlanning)
-![GitHub repo file count (file type)](https://img.shields.io/github/directory-file-count/VarunGaneshan/VSD_SOC_DesignAndPlanning)
 
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/6cd44a71-c8f5-4936-aaeb-f33dddae42f5)
 ![image](https://github.com/VarunGaneshan/VSD_SOC_DesignAndPlanning/assets/94780009/d13750d8-9dab-424a-b840-5bb354610722)
