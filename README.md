@@ -200,7 +200,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
 </div>
 <div class="toc">
   <ul>
-	<li><a href="#header-8">Course Completion Certificate</a></li>
+	<li><a href="#header-8">Internship Completion Certificate</a></li>
   </ul>
 </div>
 </body>
@@ -1647,5 +1647,5 @@ With deep appreciation,
 
 Varun 
 
-# <h1 id="header-8 ">Course Completion Certificate</h1>
+# <h1 id="header-8 ">Internship Completion Certificate</h1>
 ![image](https://github.com/user-attachments/assets/390cb9c3-bfc7-4900-bc8a-929490475e50)
