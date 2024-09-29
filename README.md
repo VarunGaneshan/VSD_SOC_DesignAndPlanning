@@ -205,7 +205,7 @@ The VSD Squadron board's chip was designed using the flow discussed in this work
 </div>
 </body>
 </html>
-# <h1> id="header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </h1>	 
+<h1 id="header-1">Section 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK (11/04/2024 - 12/03/2024) </h1>	 
 
 ## <h1 id="header-1_1">How to talk to computers?</h1>
 
